@@ -1,0 +1,63 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: EncryptDecrypt - Win32 Unicode Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Brogdens\LOCALS~1\Temp\RSPAE.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "EncrypDecrypt" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /D "_UNICODE" /D "UNICODE" /Fp"EncryptDecrypt___Win32_Unicode_Release/EncryptDecrypt.pch" /Yu"stdafx.h" /Fo"EncryptDecrypt___Win32_Unicode_Release/" /Fd"EncryptDecrypt___Win32_Unicode_Release/" /FD /c 
+"C:\Documents and Settings\Brogdens\Desktop\SQLite ditto\EncryptDecrypt\Encryption.cpp"
+"C:\Documents and Settings\Brogdens\Desktop\SQLite ditto\EncryptDecrypt\MemUtil.cpp"
+"C:\Documents and Settings\Brogdens\Desktop\SQLite ditto\EncryptDecrypt\NewRandom.cpp"
+"C:\Documents and Settings\Brogdens\Desktop\SQLite ditto\EncryptDecrypt\rijndael.cpp"
+"C:\Documents and Settings\Brogdens\Desktop\SQLite ditto\EncryptDecrypt\sha2.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Brogdens\LOCALS~1\Temp\RSPAE.tmp" 
+Creating temporary file "C:\DOCUME~1\Brogdens\LOCALS~1\Temp\RSPAF.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "EncrypDecrypt" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /D "_UNICODE" /D "UNICODE" /Fp"EncryptDecrypt___Win32_Unicode_Release/EncryptDecrypt.pch" /Yc"stdafx.h" /Fo"EncryptDecrypt___Win32_Unicode_Release/" /Fd"EncryptDecrypt___Win32_Unicode_Release/" /FD /c 
+"C:\Documents and Settings\Brogdens\Desktop\SQLite ditto\EncryptDecrypt\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Brogdens\LOCALS~1\Temp\RSPAF.tmp" 
+Creating temporary file "C:\DOCUME~1\Brogdens\LOCALS~1\Temp\RSPB0.tmp" with contents
+[
+/nologo /out:"EncryptDecrypt___Win32_Unicode_Release\UEncryptDecrypt.lib" 
+".\EncryptDecrypt___Win32_Unicode_Release\Encryption.obj"
+".\EncryptDecrypt___Win32_Unicode_Release\MemUtil.obj"
+".\EncryptDecrypt___Win32_Unicode_Release\NewRandom.obj"
+".\EncryptDecrypt___Win32_Unicode_Release\rijndael.obj"
+".\EncryptDecrypt___Win32_Unicode_Release\sha2.obj"
+".\EncryptDecrypt___Win32_Unicode_Release\StdAfx.obj"
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\Brogdens\LOCALS~1\Temp\RSPB0.tmp"
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Compiling...
+Encryption.cpp
+MemUtil.cpp
+NewRandom.cpp
+rijndael.cpp
+sha2.cpp
+Generating Code...
+Creating library...
+Creating temporary file "C:\DOCUME~1\Brogdens\LOCALS~1\Temp\RSPB1.bat" with contents
+[
+@echo off
+copy    .\EncryptDecrypt___Win32_Unicode_Release\*.lib    ..\
+]
+Creating command line "C:\DOCUME~1\Brogdens\LOCALS~1\Temp\RSPB1.bat"
+
+.\EncryptDecrypt___Win32_Unicode_Release\UEncryptDecrypt.lib
+        1 file(s) copied.
+
+
+
+<h3>Results</h3>
+UEncryptDecrypt.lib - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

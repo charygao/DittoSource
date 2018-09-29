@@ -1,0 +1,1815 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\CP_Main.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\r\n"
+    "1 TYPELIB ""CP_Main.tlb""\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Ditto2.ico"
+
+IDR_CP_MAITYPE          ICON                    "res\\CP_MainDoc.ico"
+
+IDI_DITTO_NOCOPYCB      ICON                    "res\\Ditto2_NoCopyCb.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+IDB_CLOSED_FOLDER       BITMAP                  "res\\bitmap1.bmp"
+
+IDB_CLOSED_FOLDER_PRESSED BITMAP                  "res\\closed_f.bmp"
+
+IDB_CLOSED_FOLDER_FOCUSED BITMAP                  "res\\bmp00001.bmp"
+
+IDB_OPEN_FOLDER         BITMAP                  "res\\bmp00002.bmp"
+
+IDB_OPEN_FOLDER_FOCUSED BITMAP                  "res\\open_fol.bmp"
+
+IDB_OPEN_FOLDER_PRESSED BITMAP                  "res\\bmp00003.bmp"
+
+IDB_BACK                BITMAP                  "res\\back.bmp"
+
+IDB_BACK_PRESSED        BITMAP                  "res\\back1.bmp"
+
+IDB_BACK_FOCUSED        BITMAP                  "res\\back2.bmp"
+
+IDR_EDIT_WND            BITMAP                  "res\\mainfram.bmp"
+
+IDB_BITMAP_SEARCH_NORMAL BITMAP                  "res\\search_normal.bmp"
+
+IDB_BITMAP_SEARCH_CLOSE BITMAP                  "res\\search_close.bmp"
+
+IDB_BITMAP_SEARCH_NORMAL_125 BITMAP                  "res\\search_normal_125.bmp"
+
+IDB_BITMAP_SEARCH_CLOSE_125 BITMAP                  "res\\search_close_125.bmp"
+
+IDB_BITMAP_SEARCH_CLOSE_150 BITMAP                  "res\\search_close_150.bmp"
+
+IDB_BITMAP_SEARCH_NORMAL_150 BITMAP                  "res\\search_normal_150.bmp"
+
+IDB_BITMAP_SEARCH_CLOSE_200 BITMAP                  "res\\search_close_200.bmp"
+
+IDB_BITMAP_SEARCH_NORMAL_200 BITMAP                  "res\\search_normal_200.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+IDR_EDIT_WND TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_BUTTON_NEW
+    SEPARATOR
+    BUTTON      ID_BUTTON_SAVE
+    BUTTON      ID_BUTTON_SAVE_ALL
+    SEPARATOR
+    BUTTON      ID_BUTTON_SAVE_CLOSE_CLIPBOARD
+    SEPARATOR
+    BUTTON      ID_BUTTON_CLOSE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About CP_Main...",           ID_APP_ABOUT
+    END
+END
+
+IDR_MENU MENU
+BEGIN
+    POPUP "First"
+    BEGIN
+        MENUITEM "Show Quick Paste",            ID_FIRST_SHOWQUICKPASTE
+        MENUITEM "Options",                     ID_FIRST_OPTION
+        MENUITEM SEPARATOR
+        MENUITEM "Global Hot Keys",             ID_FIRST_GLOBALHOTKEYS
+        MENUITEM "Delete Clip Data",            ID_FIRST_DELETECLIPDATA
+        MENUITEM "Fixup Sticky Clip Order",     ID_FIRST_FIXUPSTICKYCLIPORDER
+        MENUITEM SEPARATOR
+        MENUITEM "Import Clip(s)",              ID_FIRST_IMPORT
+        MENUITEM "New Clip",                    ID_FIRST_NEWCLIP
+        MENUITEM SEPARATOR
+        MENUITEM "Help",                        ID_FIRST_HELP
+        MENUITEM SEPARATOR
+        MENUITEM "Connect To Clipboard",        ID_FIRST_TOGGLECONNECTCV
+        MENUITEM "Save Current Clipboard",      ID_FIRST_SAVECURRENTCLIPBOARD
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        ID_FIRST_EXIT
+    END
+END
+
+IDR_QUICK_PASTE MENU
+BEGIN
+    POPUP "Menu"
+    BEGIN
+        POPUP "Groups"
+        BEGIN
+            MENUITEM "View Groups",                 32819
+            MENUITEM SEPARATOR
+            MENUITEM "New Group",                   32811
+            MENUITEM "New Group Selection",         32812
+            MENUITEM "Move to Group",               32840
+            MENUITEM "Toggle Last Group Toggle",    ID_GROUPS_TOGGLELASTGROUP
+        END
+        POPUP "Send To"
+        BEGIN
+            MENUITEM "Friend One",                  32824
+            MENUITEM "Friend Two",                  32825
+            MENUITEM "Friend Three",                32826
+            MENUITEM "Friend Fore",                 32827
+            MENUITEM "Friend Five",                 32828
+            MENUITEM "Friend Six",                  32829
+            MENUITEM "Friend Seven",                32830
+            MENUITEM "Friend Eight",                32831
+            MENUITEM "Friend Nine",                 32832
+            MENUITEM "Friend Ten",                  32833
+            MENUITEM "Friend Eleven",               32834
+            MENUITEM "Friend Twelve",               32835
+            MENUITEM "Friend Thirteen",             32836
+            MENUITEM "Friend Foreteen",             32837
+            MENUITEM "Friend Fifteen",              32838
+            MENUITEM SEPARATOR
+        END
+        MENUITEM "View Full Description",       32793
+        POPUP "Special Paste"
+        BEGIN
+            MENUITEM "Plain Text Only",             32841
+            MENUITEM SEPARATOR
+            MENUITEM "UPPER CASE",                  ID_SPECIALPASTE_UPPERCASE
+            MENUITEM "lower case",                  ID_SPECIALPASTE_LOWERCASE
+            MENUITEM "Capitalize Case",             ID_SPECIALPASTE_CAPITALIZE
+            MENUITEM "Sentence case",               ID_SPECIALPASTE_SENTENCE
+            MENUITEM SEPARATOR
+            MENUITEM "Remove Line Feeds",           ID_SPECIALPASTE_REMOVELINEFEEDS
+            MENUITEM "Paste + One Line Feed",       ID_SPECIALPASTE_PASTE
+            MENUITEM "Paste + Two Line Feeds",      ID_SPECIALPASTE_PASTE32919
+            MENUITEM "Paste + Current Time",        ID_SPECIALPASTE_PASTE32927
+            MENUITEM SEPARATOR
+            MENUITEM "Typoglycemia",                ID_SPECIALPASTE_TYPOGLYCEMIA
+        END
+        POPUP "Compare"
+        BEGIN
+            MENUITEM "Select Left Text",            ID_COMPARE_SELECTLEFTCOMPARE
+            MENUITEM "Select Right Text And Compare Against Left", ID_COMPARE_COMPAREAGAINST
+            MENUITEM "Compare",                     ID_COMPARE_COMPARE
+        END
+        MENUITEM "Filter On",                   ID_MENU_FILTERON
+        MENUITEM SEPARATOR
+        MENUITEM "Delete Entry",                32801
+        MENUITEM SEPARATOR
+        MENUITEM "Edit Clip",                   32860
+        MENUITEM "New Clip",                    32867
+        MENUITEM SEPARATOR
+        MENUITEM "Properties",                  32776
+        POPUP "Quick Properties"
+        BEGIN
+            MENUITEM "Never Auto Delete",           32820
+            MENUITEM "Auto Delete",                 32821
+            MENUITEM "Remove Hot Key",              32822
+            MENUITEM "Remove Quick Paste",          32856
+        END
+        POPUP "Clip Order"
+        BEGIN
+            MENUITEM "Move To Top",                 ID_CLIPORDER_MOVETOTOP
+            MENUITEM "Move Up",                     ID_CLIPORDER_MOVEUP
+            MENUITEM "Move Down",                   ID_CLIPORDER_MOVEDOWN
+            MENUITEM "Move To Last",                ID_CLIPORDER_MOVETOLAST
+            MENUITEM SEPARATOR
+            MENUITEM "Make Top Sticky Clip",        ID_STICKYCLIPS_MAKETOPSTICKYCLIP
+            MENUITEM "Make Last Sticky Clip",       ID_STICKYCLIPS_MAKELASTSTICKYCLIP
+            MENUITEM "Replace Top Sticky Clip",     ID_CLIPORDER_REPLACETOPSTICKYCLIP
+            MENUITEM "Remove Sticky Setting",       ID_STICKYCLIPS_REMOVESTICKYSETTING
+        END
+        MENUITEM SEPARATOR
+        POPUP "Import/Export"
+        BEGIN
+            MENUITEM "Import Clip(s)",              32855
+            MENUITEM "Export Clip(s)",              32853
+            MENUITEM "View as QRCode",              ID_MENU_VIEWASQRCODE
+            MENUITEM "Export Clip(s) to Text File", ID_EXPORT_EXPORTTOTEXTFILE
+            MENUITEM "Export Clip(s) to Image File", ID_IMPORT_EXPORTCLIP_BITMAP
+            MENUITEM "Export to Google Translate",  ID_IMPORT_EXPORTTOGOOGLETRANSLATE
+            MENUITEM "Import File Contents From CF_HDROP", ID_IMPORT_IMPORTCOPIEDFILE
+        END
+    END
+END
+
+IDR_MENU_SEARCH MENU
+BEGIN
+    POPUP "Menu"
+    BEGIN
+        MENUITEM "Search Description",          ID_MENU_SEARCHDESCRIPTION
+        MENUITEM "Search Full Text",            ID_MENU_SEARCHFULLTEXT
+        MENUITEM "Search Quick Paste",          ID_MENU_SEARCHQUICKPASTE
+        MENUITEM SEPARATOR
+        MENUITEM "Contains Text Search",        ID_MENU_CONTAINSTEXTSEARCHONLY
+        MENUITEM "Regular Expression Search",   ID_MENU_REGULAREXPRESSIONSEARCH
+        MENUITEM "Wildcard Search",             ID_MENU_WILDCARDSEARCH
+    END
+END
+
+IDR_DESC_OPTIONS_MENU MENU
+BEGIN
+    POPUP "First"
+    BEGIN
+        MENUITEM "Remember window position",    ID_FIRST_REMEMBERWINDOWPOSITION
+        MENUITEM "Size window to content",      ID_FIRST_SIZEWINDOWTOCONTENT
+        MENUITEM "Scale images to fit window",  ID_FIRST_SCALEIMAGESTOFITWINDOW
+        MENUITEM "Hide description window on mouse clip selection", ID_FIRST_HIDEDESCRIPTIONWINDOWONM
+        MENUITEM "Wrap Text",                   ID_FIRST_WRAPTEXT
+        MENUITEM "Always on top",               ID_FIRST_ALWAYSONTOP
+    END
+END
+
+IDR_MENU_GROUPS MENU
+BEGIN
+    POPUP "Menu"
+    BEGIN
+        MENUITEM "New Sub Group",               ID_MENU_NEWGROUP32896
+        MENUITEM "Delete Group",                ID_MENU_DELETEGROUP
+        MENUITEM "Properties",                  ID_MENU_PROPERTIES32898
+    END
+END
+
+IDR_QUICK_PASTE_SYSTEM_MENU MENU
+BEGIN
+    POPUP "Menu"
+    BEGIN
+        MENUITEM "Options...",                  32805
+        MENUITEM SEPARATOR
+        POPUP "Search Options"
+        BEGIN
+            MENUITEM "Search Description",          ID_MENU_SEARCHDESCRIPTION
+            MENUITEM "Search Full Text",            ID_MENU_SEARCHFULLTEXT
+            MENUITEM "Search Quick Paste",          ID_MENU_SEARCHQUICKPASTE
+            MENUITEM SEPARATOR
+            MENUITEM "Contains Text Search",        ID_MENU_CONTAINSTEXTSEARCHONLY
+            MENUITEM "Regular Expression Search",   ID_MENU_REGULAREXPRESSIONSEARCH
+            MENUITEM "Wildcard Search",             ID_MENU_WILDCARDSEARCH
+        END
+        POPUP "Quick Options"
+        BEGIN
+            POPUP "Lines Per Clip"
+            BEGIN
+                MENUITEM "1",                           32807
+                MENUITEM "2",                           32786
+                MENUITEM "3",                           32787
+                MENUITEM "4",                           32788
+                MENUITEM "5",                           32789
+            END
+            POPUP "Transparency"
+            BEGIN
+                MENUITEM "None",                        32800
+                MENUITEM "5 %",                         32808
+                MENUITEM "10 %",                        32792
+                MENUITEM "15 %",                        32794
+                MENUITEM "20 %",                        32796
+                MENUITEM "25 %",                        32798
+                MENUITEM "30 %",                        32799
+                MENUITEM "40 %",                        32790
+            END
+            POPUP "Positioning"
+            BEGIN
+                MENUITEM "At Caret",                    32802
+                MENUITEM "At Cursor",                   32803
+                MENUITEM "At Previous Position",        32804
+            END
+            POPUP "First Ten Hot Keys"
+            BEGIN
+                MENUITEM "Show Hot Key Text",           32778
+            END
+            POPUP "View Caption Bar On"
+            BEGIN
+                MENUITEM "Top",                         32783
+                MENUITEM "Right",                       32780
+                MENUITEM "Bottom",                      32781
+                MENUITEM "Left",                        32782
+            END
+            POPUP "Double Clicking on Caption"
+            BEGIN
+                MENUITEM "Toggles Always on Top",       32814
+                MENUITEM "Rolls-up Window",             32815
+                MENUITEM "Toggles Always Show Description", 32816
+            END
+            MENUITEM "Always on Top",               32784
+            MENUITEM "Auto Roll-up",                32791
+            MENUITEM "Always Show Description",     32813
+            MENUITEM "Prompt For New Group Names",  32817
+            MENUITEM "Select Font",                 32844
+            MENUITEM "Show Thumbnails",             32845
+            MENUITEM "Draw RTF Text",               32846
+            MENUITEM "Paste Clip after selection",  32847
+            MENUITEM "Find As You Type",            32848
+            MENUITEM "Ensure Entire Window Is Visible", 32849
+            MENUITEM "Show Clips That are in Groups in Main List", 32850
+            MENUITEM "Prompt to Delete Clip",       32852
+            MENUITEM "Elevated privileges to paste into elevated apps", ID_QUICKOPTIONS_ELEVATEPREVILEGESTOPASTEINTOELEVATEDAPPS
+            MENUITEM "Show In Taskbar",             ID_QUICKOPTIONS_SHOWINTASKBAR
+            MENUITEM "Show text for first ten copy hot keys", ID_QUICKOPTIONS_SHOWTEXTFORFIRSTTENCOPYHOTKEYS
+            MENUITEM "Show indicator a clip has been pasted", ID_QUICKOPTIONS_SHOWINDICATORACLIPHASBEENPASTED
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Global Hot Keys",             ID_MENU_GLOBALHOTKEYS32933
+        MENUITEM "Delete Clip Data",            ID_MENU_DELETECLIPDATA32934
+        MENUITEM SEPARATOR
+        MENUITEM "Import Clip(s)",              ID_MENU_IMPORTCLIP32935
+        MENUITEM "New Clip",                    ID_MENU_NEWCLIP32937
+        MENUITEM SEPARATOR
+        MENUITEM "Help",                        32842
+        MENUITEM SEPARATOR
+        MENUITEM "Connect To Clipboard",        32775
+        MENUITEM "Save Current Clipboard",      ID_MENU_SAVECURRENTCLIPBOARD
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        32806
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About CP_Main"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "CP_Main Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2002",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_OPTIONS_UTILITIES DIALOGEX 0, 0, 241, 137
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Database"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Compact Database",IDC_COMPACT_DB,14,18,107,14
+    PUSHBUTTON      "Repair Database",IDC_REPAIR,14,37,107,14
+    EDITTEXT        IDC_PATH,16,66,198,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "....",IDC_GET_PATH,214,67,14,12
+    LTEXT           "Database Path:",IDC_STATIC,14,56,50,8
+    LTEXT           "Database \r\nPath:",IDC_STATIC,27,87,50,25
+END
+
+IDD_OPTIONS_TYPES DIALOGEX 0, 0, 285, 275
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Supported Types"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LIST1,7,7,216,261,LBS_SORT | LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Add",IDC_ADD,229,10,50,14
+    PUSHBUTTON      "&Delete",IDC_DELETE,229,30,50,14
+END
+
+IDD_OPTIONS_QUICK_PASTE DIALOGEX 0, 0, 367, 280
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Quick Paste"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "Show text for first ten copy hot keys",IDC_SHOW_TEXT_FOR_FIRST_TEN_HOT_KEYS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,9,335,10
+    CONTROL         "Show leading whitespace",IDC_DESC_SHOW_LEADING_WHITESPACE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,20,335,10
+    LTEXT           "Text Lines per Clip",IDC_STATIC_LINES,25,33,93,8
+    EDITTEXT        IDC_LINES_ROW,114,31,19,12,ES_AUTOHSCROLL
+    CONTROL         "Enable Quick Paste Transparency",IDC_TRANSPARENCY,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,46,155,10
+    EDITTEXT        IDC_TRANS_PERC,177,45,19,12,ES_AUTOHSCROLL
+    CONTROL         "Show thumbnails (for CF_DIB types) (Could Increase Memory Usage and Display Speed)",IDC_SHOW_THUMBNAILS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,58,335,10
+    CONTROL         "Draw RTF Text in List (for RTF types) (Could Increase Memory Usage an Display Speed)",IDC_DRAW_RTF,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,68,335,10
+    CONTROL         "Find As You Type",IDC_CHECK_FIND_AS_YOU_TYPE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,78,335,10
+    CONTROL         "Ensure Entire Window is Visible",IDC_CHECK_ENTIRE_WINDOW_IS_VISIBLE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,88,335,10
+    CONTROL         "Show Clips That are in Groups in Main List",IDC_CHECK_SHOW_ALL_IN_MAIN_LIST,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,98,335,10
+    CONTROL         "Prompt when deleting clips",IDC_CHECK_PROMPT_DELETE_CLIP,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,108,335,10
+    COMBOBOX        IDC_COMBO_THEME,59,180,130,95,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "About Theme",IDC_BUTTON_THEME,198,180,106,12
+    PUSHBUTTON      "Font",IDC_BUTTON_FONT,18,198,143,17
+    PUSHBUTTON      "Default Font",IDC_BUTTON_DEFAULT_FAULT,164,201,70,12
+    CONTROL         "At Caret",IDC_AT_CARET,"Button",BS_AUTORADIOBUTTON,22,233,93,10
+    CONTROL         "At Cursor",IDC_AT_CURSOR,"Button",BS_AUTORADIOBUTTON,22,243,97,10
+    CONTROL         "At Previous Position",IDC_AT_PREVIOUS,"Button",BS_AUTORADIOBUTTON,22,253,117,10
+    LTEXT           "%",IDC_STATIC,199,45,8,12,SS_CENTERIMAGE
+    GROUPBOX        "Popup Positioning",IDC_STATIC_POPUP,10,224,138,41
+    LTEXT           "Theme",IDC_STATIC_THEME,18,180,36,12,SS_CENTERIMAGE
+    CONTROL         "Always Show Scroll Bar",IDC_CHECK_SHOW_SCROLL_BAR,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,118,335,10
+    CONTROL         "Elevated privileges to paste into elevated apps",IDC_CHECK_ELEVATE_PRIVILEGES,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,129,335,10
+    CONTROL         "Show In Taskbar",IDC_CHECK_SHOW_IN_TASKBAR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,140,335,10
+    EDITTEXT        IDC_EDIT_DIFF_PATH,109,162,218,14,ES_AUTOHSCROLL
+    LTEXT           "Diff Application Path",IDC_STATIC_DIFF,25,164,80,8
+    PUSHBUTTON      "...",IDC_BUTTON_DIFF_BROWSE,332,162,17,14
+    CONTROL         "Show indicator a clip has been pasted",IDC_CHECK_SHOW_CLIP_WAS_PASTED,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,151,335,10
+END
+
+IDD_OPTIONS_KEYSTROKES DIALOGEX 0, 0, 351, 270
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Keyboard Shortcuts"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "HotKey1",IDC_HOTKEY,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,97,13,80,14
+    CONTROL         "Win",IDC_CHECK_WIN_DITTO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,180,13,33,14
+    CONTROL         "",IDC_HOTKEY_TEXT_ONLY,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,97,61,80,14
+    CONTROL         "Win",IDC_CHECK_WIN_TEXT_ONLY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,180,61,33,14
+    CONTROL         "HotKey1",IDC_HOTKEY1,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,66,149,80,14
+    CONTROL         "Win",IDC_CHECK_WIN1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,146,149,33,14
+    CONTROL         "HotKey1",IDC_HOTKEY2,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,66,164,80,14
+    CONTROL         "Win",IDC_CHECK_WIN2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,146,164,33,14
+    CONTROL         "HotKey1",IDC_HOTKEY3,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,66,179,80,14
+    CONTROL         "Win",IDC_CHECK_WIN3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,147,179,33,14
+    CONTROL         "HotKey1",IDC_HOTKEY4,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,66,194,80,14
+    CONTROL         "Win",IDC_CHECK_WIN4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,146,194,33,14
+    CONTROL         "HotKey1",IDC_HOTKEY5,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,66,209,80,14
+    CONTROL         "Win",IDC_CHECK_WIN5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,146,209,33,14
+    CONTROL         "HotKey1",IDC_HOTKEY6,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,229,149,80,14
+    CONTROL         "Win",IDC_CHECK_WIN6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,309,149,27,14
+    CONTROL         "HotKey1",IDC_HOTKEY7,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,229,164,80,14
+    CONTROL         "Win",IDC_CHECK_WIN7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,309,164,26,14
+    CONTROL         "HotKey1",IDC_HOTKEY8,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,229,179,80,14
+    CONTROL         "Win",IDC_CHECK_WIN8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,310,179,26,14
+    CONTROL         "HotKey1",IDC_HOTKEY9,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,229,194,80,14
+    CONTROL         "Win",IDC_CHECK_WIN9,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,309,194,27,14
+    CONTROL         "HotKey1",IDC_HOTKEY10,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,229,209,80,14
+    CONTROL         "Win",IDC_CHECK_WIN10,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,309,209,27,14
+    CONTROL         "Send Paste (Otherwise it will just load the item on the clipboard)",IDC_CHECK_SEND_PASTE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,109,324,13
+    GROUPBOX        "Global Hot Keys for Last Ten Items Copied",IDC_STATIC_GROUP,7,97,337,134
+    LTEXT           "Activate Ditto",IDC_STATIC_ACTIVATE,19,13,71,14,SS_CENTERIMAGE
+    RTEXT           "Position 1",IDC_STATIC_1,16,149,42,14,SS_CENTERIMAGE
+    RTEXT           "Position 2",IDC_STATIC_2,16,164,42,14,SS_CENTERIMAGE
+    RTEXT           "Position 3",IDC_STATIC_3,16,179,42,14,SS_CENTERIMAGE
+    RTEXT           "Position 4",IDC_STATIC_4,16,194,42,14,SS_CENTERIMAGE
+    RTEXT           "Position 5",IDC_STATIC_5,16,209,42,14,SS_CENTERIMAGE
+    RTEXT           "Position 6",IDC_STATIC_6,181,149,42,14,SS_CENTERIMAGE
+    RTEXT           "Position 7",IDC_STATIC_7,181,164,42,14,SS_CENTERIMAGE
+    RTEXT           "Position 8",IDC_STATIC_8,181,179,42,14,SS_CENTERIMAGE
+    RTEXT           "Position 9",IDC_STATIC_9,181,194,42,14,SS_CENTERIMAGE
+    RTEXT           "Position 10",IDC_STATIC_10,181,209,42,14,SS_CENTERIMAGE
+    LTEXT           "Check the ""Win"" Button to include the windows keyboard key in your hot key.",IDC_STATIC_WIN,7,236,337,18
+    LTEXT           "Text Only Paste",IDC_STATIC_ACTIVATE2,19,61,71,14,SS_CENTERIMAGE
+    CONTROL         "Move clips to the top of the list on paste",IDC_CHECK_MOVE_CLIPS_ON_PASTE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,121,324,13
+    CONTROL         "",IDC_HOTKEY_SAVE_CLIPBOARD,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,98,77,80,14
+    CONTROL         "Win",IDC_CHECK_WIN_SAVE_CLIPBOARD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,180,77,33,14
+    LTEXT           "Save Current Clipboard",IDC_STATIC_COLLECT_CLIPBOARD,20,77,77,14,SS_CENTERIMAGE
+    CONTROL         "",IDC_HOTKEY_ACTIVATE_2,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,97,29,80,14
+    CONTROL         "Win",IDC_CHECK_WIN_DITTO2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,180,29,33,14
+    LTEXT           "Activate Ditto",IDC_STATIC_ACTIVATE3,19,29,71,14,SS_CENTERIMAGE
+    CONTROL         "",IDC_HOTKEY_ACTIVATE_3,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,97,45,80,14
+    CONTROL         "Win",IDC_CHECK_WIN_DITTO3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,180,45,33,14
+    LTEXT           "Activate Ditto",IDC_STATIC_ACTIVATE4,19,45,71,14,SS_CENTERIMAGE
+    CONTROL         "Use currently selected group in Ditto's UI for last ten copies",IDC_CHECK_USE_UI_GROUP_LAST_10,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,134,324,12
+    CONTROL         "Send custom strokes Per Application",IDC_STATIC_CUSTOM_KEYS,
+                    "MfcLink",WS_TABSTOP,214,16,127,13
+END
+
+IDD_OPTIONS_GENERAL DIALOGEX 0, 0, 375, 275
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "General"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "Start Ditto on System Startup",IDC_START_ON_STARTUP,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,8,138,10
+    CONTROL         "Maximum Number of Saved Copies",IDC_MAXIMUM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,25,154,10
+    EDITTEXT        IDC_MAX_SAVED_COPIES,164,25,27,12,ES_AUTOHSCROLL
+    CONTROL         "Paste Entries Expire after",IDC_EXPIRE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,41,153,10
+    EDITTEXT        IDC_EXPIRE_AFTER,164,40,27,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_LANGUAGE,67,60,130,95,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "About Language",IDC_BUTTON_ABOUT,207,60,106,14
+    EDITTEXT        IDC_PATH,67,148,283,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "....",IDC_GET_PATH,354,148,14,12
+    LTEXT           "Days",IDC_STATIC_DAYS,196,40,51,12,SS_CENTERIMAGE
+    LTEXT           "Language",IDC_STATIC_LANGUAGE,9,60,36,12,SS_CENTERIMAGE
+    LTEXT           "Include",IDC_STATIC_INCLUDE_APPS,14,189,36,13,SS_CENTERIMAGE
+    LTEXT           "Exclude",IDC_STATIC_EXCLUDE_APPS,14,211,36,13,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_APP_COPY_INCLUDE,50,189,316,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_APP_COPY_EXCLUDE,50,211,316,13,ES_AUTOHSCROLL
+    GROUPBOX        "Accepted Copy Applications (seperate by ;)",IDC_STATIC_APP_SEP_DESC,7,176,361,55
+    PUSHBUTTON      "Advanced",IDC_BUTTON_ADVANCED,318,256,50,14
+    COMBOBOX        IDC_COMBO_THEME,67,82,130,95,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "About Theme",IDC_BUTTON_THEME,207,82,106,14
+    PUSHBUTTON      "Font",IDC_BUTTON_FONT,67,125,130,14
+    PUSHBUTTON      "Default Font",IDC_BUTTON_DEFAULT_FAULT,207,125,106,14
+    LTEXT           "Theme",IDC_STATIC_THEME,9,82,36,12,SS_CENTERIMAGE
+    LTEXT           "Database Path",IDC_STATIC_DATABASE_PATH,9,147,57,13,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_POPUP_POSITION,67,104,130,95,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Popup Position",IDC_STATIC_POPUP_POS,9,104,51,12,SS_CENTERIMAGE
+    LTEXT           "Display Font",IDC_STATIC_FONT,9,125,51,14,SS_CENTERIMAGE
+    CONTROL         "Environment Variables",IDC_MFCLINK_ENV_VAR,"MfcLink",WS_TABSTOP,67,162,283,14
+END
+
+IDD_SELECT_DB DIALOGEX 0, 0, 276, 46
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Select Database"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,101,25,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,170,25,50,14
+    EDITTEXT        IDC_PATH,7,7,244,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_SELECT,254,7,15,12
+    PUSHBUTTON      "Use Default",IDC_USE_DEFAULT,27,25,50,14
+END
+
+IDD_OPTIONS_STATS DIALOGEX 0, 0, 346, 207
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Stats"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_ALL_DATE,13,17,133,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ALL_COPIES,65,31,52,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ALL_PASTES,65,45,52,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TRIP_DATE,174,17,143,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TRIP_COPIES,222,31,52,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TRIP_PASTES,222,45,52,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Reset",IDC_RESET_COUNTS,273,31,44,12
+    EDITTEXT        IDC_SAVED_COPIES,99,72,52,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Remove All",IDC_REMOVE_ALL,185,73,62,12
+    EDITTEXT        IDC_SAVED_COPY_DATA,99,86,52,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LAST_STARTED,99,115,157,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DATABASE_SIZE,99,129,52,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CLIPS_SENT,99,143,52,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CLIPS_RECIVED,99,157,52,12,ES_AUTOHSCROLL
+    LTEXT           "Copies",IDC_STATIC_5,174,31,45,12,SS_CENTERIMAGE
+    LTEXT           "Pastes",IDC_STATIC_6,174,45,46,12,SS_CENTERIMAGE
+    GROUPBOX        "Trip Odometer",IDC_STATIC_2,170,7,155,54
+    LTEXT           "Copies",IDC_STATIC_3,13,31,49,12,SS_CENTERIMAGE
+    LTEXT           "Pastes",IDC_STATIC_4,13,45,50,12,SS_CENTERIMAGE
+    GROUPBOX        "Odometer",IDC_STATIC_1,7,7,145,54
+    LTEXT           "Saved Copies",IDC_STATIC_7,15,72,76,12,SS_CENTERIMAGE
+    LTEXT           "Saved Copy Data",IDC_STATIC_8,15,88,80,18
+    LTEXT           "Database Size",IDC_STATIC_10,15,129,79,12,SS_CENTERIMAGE
+    LTEXT           "Clips Sent",IDC_STATIC_11,15,143,79,12,SS_CENTERIMAGE
+    LTEXT           "Clips Received",IDC_STATIC_12,15,157,79,12,SS_CENTERIMAGE
+    GROUPBOX        "",IDC_STATIC,7,63,248,47
+    LTEXT           "Last Started",IDC_STATIC_9,15,115,79,12,SS_CENTERIMAGE
+    LTEXT           "Since Last Start",IDC_STATIC_13,161,152,100,8
+END
+
+IDD_ADD_TYPE DIALOGEX 0, 0, 219, 322
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Supported Type"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LISTBOX         IDC_LIST1,7,51,151,264,LBS_SORT | LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT1,7,51,151,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Add",IDC_ADD_3,162,51,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,162,301,50,14
+    CONTROL         "Primary Clipboard Types",IDC_RADIO_PRIMARY_TYPES,"Button",BS_AUTORADIOBUTTON,7,21,93,10
+    CONTROL         "Current Clipboard Types",IDC_RADIO_CURRENT_TYPES,"Button",BS_AUTORADIOBUTTON,7,7,93,10
+    CONTROL         "Custom Clipboard Type",IDC_RADIO_CUSTOM_TYPE,"Button",BS_AUTORADIOBUTTON,7,35,93,10
+END
+
+IDD_COPY_PROPERTIES DIALOGEX 0, 0, 293, 289
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Copy Properties"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "HotKey1",IDC_HOTKEY,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,51,7,94,13
+    EDITTEXT        IDC_DATE,51,38,93,13,ES_AUTOHSCROLL | WS_DISABLED | NOT WS_TABSTOP
+    CONTROL         "&Never Auto Delete",IDC_NEVER_AUTO_DELETE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,149,40,105,10
+    COMBOBOX        IDC_COMBO1,71,91,215,128,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_COPY_DATA,7,205,279,43,LBS_SORT | LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Delete",IDC_DELETE_COPY_DATA,6,251,42,12
+    DEFPUSHBUTTON   "OK",IDOK,163,268,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,236,268,50,14
+    LTEXT           "Item Title",IDC_STATIC_TITLE,7,108,168,8
+    LTEXT           "Date Added",IDC_STATIC_DATE,8,38,43,13,SS_CENTERIMAGE
+    LTEXT           "Hot Key",IDC_STATIC_HOT_KEY,7,7,35,13,SS_CENTERIMAGE
+    LTEXT           "Copy Formats",IDC_STATIC_FORMATS,7,194,226,8
+    LTEXT           "Move To Group",IDC_STATIC_MOVE_TO_GROUP,8,92,62,9
+    EDITTEXT        IDC_EDIT_QUICK_PASTE,71,72,215,13,ES_AUTOHSCROLL
+    LTEXT           "Quick Paste Text",IDC_STATIC_QUICK_PASTE,7,72,62,13,SS_CENTERIMAGE
+    CONTROL         "Hotkey available globally",IDC_HOT_KEY_GLOBAL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,183,7,100,14
+    CONTROL         "Win",IDC_CHECK_WIN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,149,7,33,14
+    EDITTEXT        IDC_DATE_LAST_USED,51,54,93,13,ES_AUTOHSCROLL | WS_DISABLED | NOT WS_TABSTOP
+    LTEXT           "Last Used",IDC_STATIC_DATE2,8,54,43,13,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_PROPERTIES,7,119,279,74,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    CONTROL         "",IDC_HOTKEY_MOVE_TO_GROUP,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,79,23,66,13
+    LTEXT           "Save/Move To Group",IDC_STATIC_HOT_KEY_MOVE_TO_GROUP,7,23,70,13,SS_CENTERIMAGE
+    CONTROL         "Hotkey available globally",IDC_HOT_KEY_GLOBAL_MOVE_TO_GROUP,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,183,23,100,14
+    CONTROL         "Win",IDC_CHECK_WIN_MOVE_TO_GROUP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,149,23,33,14
+    LTEXT           "Selected format MD5",IDC_STATIC_MD5,65,250,68,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_MD5,139,249,147,14,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_ABOUT DIALOGEX 0, 0, 337, 206
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Ditto"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LISTBOX         IDC_LIST,7,16,323,132,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    LTEXT           "E-mail Scott Brogden",IDC_HYPER_LINK,7,153,67,8
+    LTEXT           "Ditto Home Page - ditto-cp.sf.net",IDC_STATIC_LINK,7,171,104,8
+END
+
+IDD_GROUP_NAME DIALOGEX 0, 0, 186, 49
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Ditto"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_NAME,7,11,172,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,75,28,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,28,50,14
+    LTEXT           "Name",IDC_STATIC,7,1,59,10
+END
+
+IDD_OPTIONS_FRIENDS DIALOGEX 0, 0, 367, 275
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Friends"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_PLACE_ON_CLIPBOARD,96,39,210,13,ES_AUTOHSCROLL
+    CONTROL         "Disable Receiving Clips",IDC_CHECK_DISABLE_FRIENDS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,95,53,146,10
+    EDITTEXT        IDC_EDIT_PASSWORD,96,66,210,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ADDITIONAL,95,108,210,12,ES_AUTOHSCROLL
+    CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,7,186,353,72
+    CONTROL         "Log Send Receive Commands",IDC_CHECK_LOG_SEND_RECIEVE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,260,353,12
+    LTEXT           "If Send All Copies is selected then all copies from this computer will be sent to the other computer.  If that is not selected then it will just be in the right click menu to send a copy to that computer.",IDC_STATIC_6,7,159,353,24
+    LTEXT           "IP/Computer Names separated by commas",IDC_STATIC_2,7,37,84,17
+    LTEXT           "When you receive a sent copy if their ip or computer name is in this list then it will be put on the clipboard.  Otherwise it will be in the saved clips to use at a later time.",IDC_STATIC_1,7,10,353,26
+    LTEXT           "Network Password",IDC_STATIC_3,7,69,79,9
+    LTEXT           "If you are receiving clips from computers where your network password does not match, enter additional network passwords separated by commas",IDC_STATIC_4,7,83,353,22
+    LTEXT           "Receive Passwords",IDC_STATIC_5,7,110,79,9
+    CONTROL         "Request using IP Address",IDC_RADIO_USE_IP,"Button",BS_AUTORADIOBUTTON,15,136,98,10
+    GROUPBOX        "Remote Files",IDC_STATIC_REMOTE_FILES,7,124,353,29
+    CONTROL         "Request using Host Name",IDC_RADIO_USE_HOST_NAME,"Button",BS_AUTORADIOBUTTON,151,136,98,10
+END
+
+IDD_FRIEND_DETAILS DIALOGEX 0, 0, 203, 79
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Friend Details"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_IP,47,20,83,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_DESCRIPTION,47,39,149,13,ES_AUTOHSCROLL
+    CONTROL         "Send All Copies to this friend",IDC_CHECK_SEND_ALL,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,47,7,105,10
+    DEFPUSHBUTTON   "OK",IDOK,89,58,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,146,58,50,14
+    LTEXT           "IP/Name",IDC_STATIC_1,7,23,30,8
+    LTEXT           "Description",IDC_STATIC_2,7,41,36,8
+END
+
+IDD_MOVE_TO_GROUP DIALOGEX 0, 0, 254, 177
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Move to Group"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "Tree1",IDC_TREE,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,7,7,240,142
+    PUSHBUTTON      "New Group",IDC_BUTTON_NEW_GROUP,7,156,55,14
+    DEFPUSHBUTTON   "OK",IDOK,143,156,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,197,156,50,14
+END
+
+IDD_DIALOG_REMOTE_FILE DIALOGEX 0, 0, 284, 110
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Ditto"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,227,89,50,14
+    CONTROL         "Progress1",IDC_PROGRESS_FILE,"msctls_progress32",PBS_SMOOTH | WS_BORDER,7,78,270,9
+    CONTROL         "Progress1",IDC_PROGRESS_ALL_FILES,"msctls_progress32",PBS_SMOOTH | WS_BORDER,7,45,270,9
+    LTEXT           "a",IDC_STATIC_1,7,33,270,10,SS_CENTERIMAGE
+    LTEXT           "",IDC_STATIC_2,7,59,270,16,SS_CENTERIMAGE
+    CONTROL         "Animate1",IDC_FILE_COPY,"SysAnimate32",ACS_CENTER | ACS_TRANSPARENT | WS_TABSTOP,7,3,270,26
+END
+
+IDD_OPTIONS_COPY_BUFFERS DIALOGEX 0, 0, 287, 250
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Copy Buffers"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_COPY_1,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,63,16,80,14
+    CONTROL         "Win",IDC_WIN_COPY_1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,146,16,33,14
+    CONTROL         "",IDC_PASTE_1,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,63,32,80,14
+    CONTROL         "Win",IDC_WIN_PASTE_1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,146,32,33,14
+    CONTROL         "",IDC_CUT_1,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,63,47,80,14
+    CONTROL         "Win",IDC_WIN_CUT_1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,146,47,33,14
+    CONTROL         "Play Sound on Copy",IDC_PLAY_SOUND_1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,179,16,80,14
+    CONTROL         "",IDC_COPY_2,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,63,81,80,14
+    CONTROL         "Win",IDC_WIN_COPY_2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,146,81,33,14
+    CONTROL         "",IDC_PASTE_2,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,63,97,80,14
+    CONTROL         "Win",IDC_WIN_PASTE_2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,146,97,33,14
+    CONTROL         "",IDC_CUT_2,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,63,112,80,14
+    CONTROL         "Win",IDC_WIN_CUT_2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,146,112,33,14
+    CONTROL         "Play Sound on Copy",IDC_PLAY_SOUND_2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,179,81,80,14
+    CONTROL         "",IDC_COPY_3,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,63,148,80,14
+    CONTROL         "Win",IDC_WIN_COPY_3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,146,148,33,14
+    CONTROL         "",IDC_PASTE_3,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,63,164,80,14
+    CONTROL         "Win",IDC_WIN_PASTE_3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,146,164,33,14
+    CONTROL         "",IDC_CUT_3,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,63,179,80,14
+    CONTROL         "Win",IDC_WIN_CUT_3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,146,179,33,14
+    CONTROL         "Play Sound on Copy",IDC_PLAY_SOUND_3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,179,148,80,14
+    LTEXT           "Copy",IDC_STATIC_COPY_1,19,16,42,14,SS_CENTERIMAGE
+    LTEXT           "Paste",IDC_STATIC_PASTE_1,19,32,43,14,SS_CENTERIMAGE
+    LTEXT           "Cut",IDC_STATIC_CUT_1,19,47,43,14,SS_CENTERIMAGE
+    GROUPBOX        "Copy Buffer 1",IDC_BUFFER_GROUP_1,7,7,273,61
+    LTEXT           "Copy",IDC_STATIC_COPY_2,19,81,42,14,SS_CENTERIMAGE
+    LTEXT           "Paste",IDC_STATIC_PASTE_2,19,97,43,14,SS_CENTERIMAGE
+    LTEXT           "Cut",IDC_STATIC_CUT_2,19,112,43,14,SS_CENTERIMAGE
+    GROUPBOX        "Copy Buffer 2",IDC_BUFFER_GROUP_2,7,72,273,61
+    LTEXT           "Copy",IDC_STATIC_COPY_3,19,148,42,14,SS_CENTERIMAGE
+    LTEXT           "Paste",IDC_STATIC_PASTE_3,19,164,43,14,SS_CENTERIMAGE
+    LTEXT           "Cut",IDC_STATIC_CUT_3,19,179,43,14,SS_CENTERIMAGE
+    GROUPBOX        "Copy Buffer 3",IDC_BUFFER_GROUP_3,7,139,273,61
+END
+
+IDD_GLOBAL_CLIPS DIALOGEX 0, 0, 369, 199
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Global Hot Keys"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Close",IDCANCEL,312,178,50,14
+    CONTROL         "",IDC_LIST2,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,355,166
+END
+
+IDD_DELETE_CLIP_DATA DIALOGEX 0, 0, 675, 315
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Delete Clip Data"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,618,294,50,14
+    CONTROL         "",IDC_LIST2,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_OWNERDATA | WS_BORDER | WS_TABSTOP,7,105,661,185
+    CONTROL         "",IDC_TIME_CREATE_START,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | WS_DISABLED | WS_TABSTOP | 0x8,203,40,60,15
+    CONTROL         "",IDC_DATE_CREATE_START,"SysDateTimePick32",DTS_RIGHTALIGN | WS_DISABLED | WS_TABSTOP,147,40,53,15
+    COMBOBOX        IDC_COMBO_DATA_FORMAT,15,73,116,108,CBS_DROPDOWNLIST | CBS_SORT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_CLIP_TITLE,15,39,115,17,ES_AUTOHSCROLL | WS_DISABLED
+    CONTROL         "",IDC_TIME_CREATE_END,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | WS_DISABLED | WS_TABSTOP | 0x8,348,39,59,15
+    CONTROL         "",IDC_DATE_CREATE_END,"SysDateTimePick32",DTS_RIGHTALIGN | WS_DISABLED | WS_TABSTOP,291,39,53,15
+    CONTROL         "Title",IDC_CHECK_CLIP_TITLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,26,29,10
+    CONTROL         "Create Date Range",IDC_CHECK_CREATE_DATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,147,26,78,10
+    CONTROL         "",IDC_TIME_USE_START,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | WS_DISABLED | WS_TABSTOP | 0x8,203,73,60,15
+    CONTROL         "",IDC_DATE_USE_START,"SysDateTimePick32",DTS_RIGHTALIGN | WS_DISABLED | WS_TABSTOP,147,73,53,15
+    CONTROL         "",IDC_TIME_USE_END,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | WS_DISABLED | WS_TABSTOP | 0x8,348,73,59,15
+    CONTROL         "",IDC_DATE_USE_END,"SysDateTimePick32",DTS_RIGHTALIGN | WS_DISABLED | WS_TABSTOP,291,73,53,15
+    CONTROL         "Last Used Range",IDC_CHECK_LAST_USE_DATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,147,60,70,10
+    CONTROL         "Format",IDC_CHECK_DATA_FORMAT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,60,39,10
+    PUSHBUTTON      "Search",IDC_BUTTON_SEARCH,607,73,50,14
+    LTEXT           "Database Size:",IDC_STATIC_DB_SIZE_TEXT,7,300,49,8
+    LTEXT           "Size",IDC_STATIC_DB_SIZE,59,300,39,8
+    LTEXT           "Selected Size:",IDC_STATIC_SELECTED_SIZE_TEXT,109,300,46,8
+    LTEXT           "Size",IDC_STATIC_SELECTED_SIZE,161,300,39,8
+    PUSHBUTTON      "Delete",IDC_BUTTON_APPLY,561,295,49,13
+    CTEXT           "Each clip in Ditto is made of multiple clipboard items, all clipboard items in Ditto are listed below.",IDC_STATIC_DESC,7,7,661,14
+    LTEXT           "<  --   >",IDC_STATIC,263,42,27,8
+    LTEXT           "<  --   >",IDC_STATIC,263,76,27,8
+    GROUPBOX        "Search Options",IDC_STATIC_GROUP_SEARCH,4,15,661,83
+    LTEXT           "Selected Count:",IDC_STATIC_SELECTED_SIZE_TEXT2,207,300,52,8
+    LTEXT           "Count",IDC_STATIC_SELECTED_COUNT,259,300,39,8
+END
+
+IDD_OPTIONS_QUICK_PASTE_KEYBOARD DIALOGEX 0, 0, 375, 278
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION " "
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,21,361,122
+    CONTROL         "Keyboard Shortcut",IDC_RADIO_KEYBOARD_1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,14,205,76,10
+    CONTROL         "Mouse Click",IDC_RADIO_MOUSE_1,"Button",BS_AUTORADIOBUTTON,99,205,53,10
+    CONTROL         "",IDC_HOTKEY1,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,25,219,80,14
+    PUSHBUTTON      "Enter Key",IDC_BUTTON_ENTER,109,219,44,14
+    CONTROL         "Shift",IDC_CHECK_SHIFT_1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,236,31,10
+    CONTROL         "Control",IDC_CHECK_CONTROL_1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,61,236,39,10
+    CONTROL         "Alt",IDC_CHECK_ALT_1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,105,236,25,10
+    CONTROL         "Enable Second Keypress",IDC_CHECK_ENABLE_SECOND_PRESS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,181,180,105,10
+    CONTROL         "Keyboard Shortcut",IDC_RADIO_KEYBOARD_2,"Button",BS_AUTORADIOBUTTON | WS_GROUP,183,204,76,10
+    CONTROL         "Mouse Click",IDC_RADIO_MOUSE_2,"Button",BS_AUTORADIOBUTTON,263,204,53,10
+    CONTROL         "",IDC_HOTKEY2,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,195,218,80,14
+    PUSHBUTTON      "Enter Key",IDC_BUTTON_ENTER2,282,218,44,14
+    CONTROL         "Shift",IDC_CHECK_SHIFT_2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,195,236,31,10
+    CONTROL         "Control",IDC_CHECK_CONTROL_2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,231,236,39,10
+    CONTROL         "Alt",IDC_CHECK_ALT_2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,275,236,25,10
+    PUSHBUTTON      "Assign",IDC_ASSIGN,109,259,50,14
+    COMBOBOX        IDC_COMBO_ALL_ASSIGNED,8,158,253,99,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Remove",IDC_BUTTON_REMOVE,265,157,50,14
+    PUSHBUTTON      "Add",IDC_BUTTON_ADD,318,157,50,14
+    LTEXT           "Shortcuts for selected command:",IDC_STATIC_SHORTCUTS,8,147,106,8
+    GROUPBOX        "First Keypress",IDC_STATIC_FIRST_KEYPRESS,7,192,151,63
+    GROUPBOX        "Second Keypress",IDC_STATIC_SECOND_PRESS,172,193,169,62
+    COMBOBOX        IDC_MOUSE_1,25,220,68,49,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_MOUSE_2,195,218,68,49,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Reset",IDC_BUTTON_RESET,318,7,50,14
+END
+
+IDD_DIALOG_FREIND_PROMPT DIALOGEX 0, 0, 237, 91
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Send to Friend"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_NAME,66,7,164,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_DESC,66,24,164,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,125,42,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,180,42,50,14
+    CONTROL         "Add to ""Send To"" menu",IDC_CHECK_SAVE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,44,96,10
+    PUSHBUTTON      "Clear Custom Send List",IDC_BUTTON_CLEAR,7,70,87,14,NOT WS_TABSTOP
+    LTEXT           "IP or Host Name",IDC_STATIC_FRIEND_PROMPT,7,7,53,14,SS_CENTERIMAGE
+    LTEXT           "Description",IDC_STATIC_FRIEND_DESC,7,24,53,14,SS_CENTERIMAGE
+END
+
+IDD_ADV_OPTIONS DIALOGEX 0, 0, 262, 268
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Advanced Options"
+FONT 10, "Segoe UI", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,147,250,50,11
+    PUSHBUTTON      "Cancel",IDCANCEL,205,249,50,12
+    CONTROL         "",IDC_MFCPROPERTYGRID1,"MfcPropertyGrid",0x100,7,7,248,212
+    PUSHBUTTON      "Compact and Repair Database",IDC_BT_COMPACT_AND_REPAIR,7,251,108,11
+    PUSHBUTTON      "On Copy Scripts",IDC_BUTTON_COPY_SCRIPTS,7,224,108,11
+    PUSHBUTTON      "On Paste Scripts",IDC_BUTTON_PASTE_SCRIPTS,7,237,108,11
+END
+
+IDD_SCRIPT_EDITOR DIALOGEX 0, 0, 435, 314
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Scripts"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_NAME,142,7,284,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_DESC,142,24,284,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_CHECK_ACTIVE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,142,42,16,10
+    EDITTEXT        IDC_EDIT_SCRIPT,100,67,326,102,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+    EDITTEXT        IDC_EDIT_INPUT,100,195,265,40,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+    EDITTEXT        IDC_EDIT_OUTPUT,100,250,326,40,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+    PUSHBUTTON      "Run",IDC_BUTTON_RUN,376,205,50,14
+    DEFPUSHBUTTON   "OK",IDOK,321,293,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,376,293,50,14
+    LISTBOX         IDC_LIST_SCRIPTS,7,7,83,281,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add",IDC_BUTTON_ADD_SCRIPT,7,293,32,14
+    PUSHBUTTON      "Delete",IDC_BUTTON_DELETE_SCRIPT,58,293,32,14
+    LTEXT           "Name",IDC_STATIC_NAME,100,7,19,14,SS_CENTERIMAGE
+    LTEXT           "Desciption",IDC_STATIC_DESC,100,24,34,14,SS_CENTERIMAGE
+    LTEXT           "Sample Input",IDC_STATIC_INPUT,100,185,43,8
+    LTEXT           "Sample Output",IDC_STATIC_OUTPUT,100,238,48,8
+    LTEXT           "All function must return true/false.  Return true to cancel saving the copy or cancel the paste.",IDC_STATIC_RETURN_DESC,100,174,326,8
+    LTEXT           "Script",IDC_STATIC_SCRIPT,100,56,30,10
+    LTEXT           "Active",IDC_STATIC_ACTIVE,100,42,21,14
+    CONTROL         "ChaiScript (http://chaiscript.com/)",IDC_MFCLINK_CHAISCRIPT,
+                    "MfcLink",WS_TABSTOP,142,54,119,10
+    CONTROL         "Examples",IDC_MFCLINK2_EXAMPLES,"MfcLink",WS_TABSTOP,294,54,60,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,20,0,0
+ PRODUCTVERSION 3,20,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "Ditto"
+            VALUE "FileVersion", "3.20.0.0"
+            VALUE "InternalName", "CP_Main"
+            VALUE "LegalCopyright", "Copyright (C) 2003"
+            VALUE "OriginalFilename", "Ditto"
+            VALUE "ProductName", "Ditto"
+            VALUE "ProductVersion", "3.20.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_OPTIONS_UTILITIES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 130
+    END
+
+    IDD_OPTIONS_TYPES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 278
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 268
+    END
+
+    IDD_OPTIONS_QUICK_PASTE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 360
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 272
+    END
+
+    IDD_OPTIONS_KEYSTROKES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 344
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 262
+    END
+
+    IDD_OPTIONS_GENERAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 368
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 270
+    END
+
+    IDD_SELECT_DB, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 269
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+
+    IDD_OPTIONS_STATS, DIALOG
+    BEGIN
+    END
+
+    IDD_ADD_TYPE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 212
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 315
+    END
+
+    IDD_COPY_PROPERTIES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 286
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 282
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 330
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 199
+    END
+
+    IDD_GROUP_NAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 42
+    END
+
+    IDD_OPTIONS_FRIENDS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 360
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 272
+    END
+
+    IDD_FRIEND_DETAILS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 196
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 72
+    END
+
+    IDD_MOVE_TO_GROUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 247
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
+
+    IDD_DIALOG_REMOTE_FILE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 277
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 103
+    END
+
+    IDD_OPTIONS_COPY_BUFFERS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 280
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 243
+    END
+
+    IDD_GLOBAL_CLIPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 362
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 192
+    END
+
+    IDD_DELETE_CLIP_DATA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 668
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 308
+    END
+
+    IDD_OPTIONS_QUICK_PASTE_KEYBOARD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 368
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 271
+    END
+
+    IDD_DIALOG_FREIND_PROMPT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_ADV_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 255
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 261
+    END
+
+    IDD_SCRIPT_EDITOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 426
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 307
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AVI
+//
+
+IDR_FILE_COPY           AVI                     "res\\FILECOPY.AVI"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+IDB_OPEN_FOLDER_PNG     PNG                     "res\\folder_open.png"
+
+IDB_COG_16_16           PNG                     "res\\cog_16_16.png"
+
+IDB_OPEN_FOLDER_16_16   PNG                     "res\\opened_folder_16_16.png"
+
+IDB_OPEN_FOLDER_20_20   PNG                     "res\\opened_folder_20_20.png"
+
+IDB_OPEN_FOLDER_24_24   PNG                     "res\\opened_folder_24_24.png"
+
+IDB_OPEN_FOLDER_32_32   PNG                     "res\\opened_folder_32_32.png"
+
+IDB_COG_20_20           PNG                     "res\\cog_20_20.png"
+
+IDB_COG_24_24           PNG                     "res\\cog_24_24.png"
+
+IDB_COG_32_32           PNG                     "res\\cog_32_32.png"
+
+IDB_LEFT_ARROW_16_16    PNG                     "res\\left_arrow_16_16.png"
+
+IDB_LEFT_ARROW_20_20    PNG                     "res\\left_arrow_20_20.png"
+
+IDB_LEFT_ARROW_24_24    PNG                     "res\\left_arrow_24_24.png"
+
+IDB_LEFT_ARROW_32_32    PNG                     "res\\left_arrow_32_32.png"
+
+IDB_CLOSE_8_8           PNG                     "res\\close_8_8.png"
+
+IDB_CLOSE_10_10         PNG                     "res\\close_10_10.png"
+
+IDB_CLOSE_12_13         PNG                     "res\\close_12_12.png"
+
+IDB_CLOSE_16_16         PNG                     "res\\close_16_16.png"
+
+IDB_CHEVRON_RIGHT_8_8   PNG                     "res\\chevron_right_8_8.png"
+
+IDB_CHEVRON_RIGHT_10_10 PNG                     "res\\chevron_right_10_10.png"
+
+IDB_CHEVRON_RIGHT_12_12 PNG                     "res\\chevron_right_12_12.png"
+
+IDB_CHEVRON_RIGHT_16_16 PNG                     "res\\chevron_right_16_16.png"
+
+IDB_CHEVRON_LEFT_8_8    PNG                     "res\\chevron_left_8_8.png"
+
+IDB_CHEVRON_LEFT_10_10  PNG                     "res\\chevron_left_10_10.png"
+
+IDB_CHEVRON_LEFT_12_12  PNG                     "res\\chevron_left_12_12.png"
+
+IDB_CHEVRON_LEFT_16_16  PNG                     "res\\chevron_left_16_16.png"
+
+IDB_CHEVRON_TOP_8_8     PNG                     "res\\chevron_top_8_8.png"
+
+IDB_CHEVRON_TOP_10_10   PNG                     "res\\chevron_top_10_10.png"
+
+IDB_CHEVRON_TOP_12_12   PNG                     "res\\chevron_top_12_12.png"
+
+IDB_CHEVRON_TOP_16_16   PNG                     "res\\chevron_top_16_16.png"
+
+IDB_CHEVRON_BOTTOM_8_8  PNG                     "res\\chevron_bottom_8_8.png"
+
+IDB_CHEVRON_BOTTOM_10_10 PNG                     "res\\chevron_bottom_10_10.png"
+
+IDB_CHEVRON_BOTTOM_12_12 PNG                     "res\\chevron_bottom_12_12.png"
+
+IDB_CHEVRON_BOTTOM_16_16 PNG                     "res\\chevron_bottom_16_16.png"
+
+IDB_MAXIMIZE_8_8        PNG                     "res\\maximize_8_8.png"
+
+IDB_MAXIMIZE_10_10      PNG                     "res\\maximize_10_10.png"
+
+IDB_MAXIMIZE_12_12      PNG                     "res\\maximize_12_12.png"
+
+IDB_MAXIMIZE_16_16      PNG                     "res\\maximize_16_16.png"
+
+IDB_YELLOW_STAR_32_32   PNG                     "res\\yellow_star_32_32.png"
+
+IDB_YELLOW_STAR_24_24   PNG                     "res\\yellow_star_24_24.png"
+
+IDB_YELLOW_STAR_20_20   PNG                     "res\\yellow_star_20_20.png"
+
+IDB_YELLOW_STAR_16_16   PNG                     "res\\yellow_star_16_16.png"
+
+IDB_IN_FOLDER_32_32     PNG                     "res\\in_folder_32_32.png"
+
+IDB_IN_FOLDER_24_24     PNG                     "res\\in_folder_24_24.png"
+
+IDB_IN_FOLDER_20_20     PNG                     "res\\in_folder_20_20.png"
+
+IDB_IN_FOLDER_16_16     PNG                     "res\\in_folder_16_16.png"
+
+IDB_KEY_32_32           PNG                     "res\\key_stroke_32_32.png"
+
+IDB_KEY_24_24           PNG                     "res\\key_stroke_24_24.png"
+
+IDB_KEY_20_20           PNG                     "res\\key_stroke_20_20.png"
+
+IDB_KEY_16_16           PNG                     "res\\key_stroke_16_16.png"
+
+IDB_STICKY_32_32        PNG                     "res\\Sticky_32_32.png"
+
+IDB_STICKY_24_24        PNG                     "res\\Sticky_24_24.png"
+
+IDB_STICKY_20_20        PNG                     "res\\Sticky_20_20.png"
+
+IDB_STICKY_16_16        PNG                     "res\\Sticky_16_16.png"
+
+IDB_SYSTEM_MENU_16_16   PNG                     "res\\system_menu_16_16.png"
+
+IDB_SYSTEM_MENU_20_20   PNG                     "res\\system_menu_20_20.png"
+
+IDB_SYSTEM_MENU_24_24   PNG                     "res\\system_menu_24_24.png"
+
+IDB_SYSTEM_MENU_32_32   PNG                     "res\\system_menu_32_32.png"
+
+ChevronRight_Black_16_16 PNG                     "res\\ChevronRight_Black_16_16.png"
+
+ChevronRight_Black_20_20 PNG                     "res\\ChevronRight_Black_20_20.png"
+
+ChevronRight_Black_24_24 PNG                     "res\\ChevronRight_Black_24_24.png"
+
+ChevronRight_Black_32_32 PNG                     "res\\ChevronRight_Black_32_32.png"
+
+Close_Black_16_16       PNG                     "res\\Close_Black_16_16.png"
+
+Close_Black_20_20       PNG                     "res\\Close_Black_20_20.png"
+
+Close_Black_24_24       PNG                     "res\\Close_Black_24_24.png"
+
+Close_Black_32_32       PNG                     "res\\Close_Black_32_32.png"
+
+NewWindowIcon_24_14     PNG                     "res\\NewWindowIcon_24_14.png"
+
+system_menu_2_48        PNG                     "res\\system_menu_2_48.png"
+
+system_menu_2_36        PNG                     "res\\system_menu_2_36.png"
+
+system_menu_2_30        PNG                     "res\\system_menu_2_30.png"
+
+system_menu_2_24        PNG                     "res\\system_menu_2_24.png"
+
+open_folder_48          PNG                     "res\\open_folder_48.png"
+
+open_folder_36          PNG                     "res\\open_folder_36.png"
+
+open_folder_30          PNG                     "res\\open_folder_30.png"
+
+open_folder_24          PNG                     "res\\open_folder_24.png"
+
+ChevronLeft_Black_16_16 PNG                     "res\\ChevronLeft_Black_16_16.png"
+
+ChevronLeft_Black_20_20 PNG                     "res\\ChevronLeft_Black_20_20.png"
+
+ChevronLeft_Black_24_24 PNG                     "res\\ChevronLeft_Black_24_24.png"
+
+ChevronLeft_Black_32_32 PNG                     "res\\ChevronLeft_Black_32_32.png"
+
+NewWindowIcon_48        PNG                     "res\\NewWindowIcon_48.png"
+
+NewWindowIcon_36        PNG                     "res\\NewWindowIcon_36.png"
+
+NewWindowIcon_30        PNG                     "res\\NewWindowIcon_30.png"
+
+return_16               PNG                     "res\\return_16.png"
+
+return_20               PNG                     "res\\return_20.png"
+
+return_24               PNG                     "res\\return_24.png"
+
+return_32               PNG                     "res\\return_32.png"
+
+Search_16               PNG                     "res\\Search_16.png"
+
+Search_20               PNG                     "res\\Search_20.png"
+
+Search_24               PNG                     "res\\Search_24.png"
+
+Search_32               PNG                     "res\\Search_32.png"
+
+search_close_16         PNG                     "res\\search_close_16.png"
+
+minimize_16             PNG                     "res\\minimize_16.png"
+
+minimize_32             PNG                     "res\\minimize_32.png"
+
+minimize_24             PNG                     "res\\minimize_24.png"
+
+minimize_20             PNG                     "res\\minimize_20.png"
+
+maximize_32             PNG                     "res\\maximize_32.png"
+
+maximize_24             PNG                     "res\\maximize_24.png"
+
+maximize_20             PNG                     "res\\maximize_20.png"
+
+return_28               PNG                     "res\\return_28.png"
+
+minimize_28             PNG                     "res\\minimize_28.png"
+
+maximize_28             PNG                     "res\\maximize_28.png"
+
+ChevronLeft_Black_28    PNG                     "res\\ChevronLeft_Black_28.png"
+
+ChevronRight_Black_28   PNG                     "res\\ChevronRight_Black_28.png"
+
+Close_Black_28          PNG                     "res\\Close_Black_28.png"
+
+system_menu_2_42        PNG                     "res\\system_menu_2_42.png"
+
+open_folder_42          PNG                     "res\\open_folder_42.png"
+
+cog_28                  PNG                     "res\\cog_28.png"
+
+Search_28               PNG                     "res\\Search_28.png"
+
+down_16                 PNG                     "res\\down_16.png"
+
+down_20                 PNG                     "res\\down_20.png"
+
+down_24                 PNG                     "res\\down_24.png"
+
+down_28                 PNG                     "res\\down_28.png"
+
+down_32                 PNG                     "res\\down_32.png"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_OPTIONS_QUICK_PASTE_KEYBOARD AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_OPTIONS_QUICK_PASTE AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_ADD_TYPE AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_OPTIONS_TYPES AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_OPTIONS_STATS AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_OPTIONS_KEYSTROKES AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_FREIND_PROMPT AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_OPTIONS_GENERAL AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_ADV_OPTIONS AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_OPTIONS_FRIENDS AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_SCRIPT_EDITOR AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_COPY_PROPERTIES AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_CP_MAIN             REGISTRY                "CP_Main.rgs"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_ADV_OPTIONS DLGINIT
+BEGIN
+    IDC_MFCPROPERTYGRID1, 0x37c, 413, 0
+0x4d3c, 0x4346, 0x7250, 0x706f, 0x7265, 0x7974, 0x7247, 0x6469, 0x485f, 
+0x6165, 0x6564, 0x4372, 0x7274, 0x3e6c, 0x5254, 0x4555, 0x2f3c, 0x464d, 
+0x5043, 0x6f72, 0x6570, 0x7472, 0x4779, 0x6972, 0x5f64, 0x6548, 0x6461, 
+0x7265, 0x7443, 0x6c72, 0x3c3e, 0x464d, 0x5043, 0x6f72, 0x6570, 0x7472, 
+0x4779, 0x6972, 0x5f64, 0x6544, 0x6373, 0x6972, 0x7470, 0x6f69, 0x416e, 
+0x6572, 0x3e61, 0x5254, 0x4555, 0x2f3c, 0x464d, 0x5043, 0x6f72, 0x6570, 
+0x7472, 0x4779, 0x6972, 0x5f64, 0x6544, 0x6373, 0x6972, 0x7470, 0x6f69, 
+0x416e, 0x6572, 0x3e61, 0x4d3c, 0x4346, 0x7250, 0x706f, 0x7265, 0x7974, 
+0x7247, 0x6469, 0x415f, 0x706c, 0x6168, 0x6562, 0x6974, 0x4d63, 0x646f, 
+0x3e65, 0x4146, 0x534c, 0x3c45, 0x4d2f, 0x4346, 0x7250, 0x706f, 0x7265, 
+0x7974, 0x7247, 0x6469, 0x415f, 0x706c, 0x6168, 0x6562, 0x6974, 0x4d63, 
+0x646f, 0x3e65, 0x4d3c, 0x4346, 0x7250, 0x706f, 0x7265, 0x7974, 0x7247, 
+0x6469, 0x4d5f, 0x646f, 0x6669, 0x6569, 0x5064, 0x6f72, 0x6570, 0x7472, 
+0x6569, 0x3e73, 0x4146, 0x534c, 0x3c45, 0x4d2f, 0x4346, 0x7250, 0x706f, 
+0x7265, 0x7974, 0x7247, 0x6469, 0x4d5f, 0x646f, 0x6669, 0x6569, 0x5064, 
+0x6f72, 0x6570, 0x7472, 0x6569, 0x3e73, 0x4d3c, 0x4346, 0x7250, 0x706f, 
+0x7265, 0x7974, 0x7247, 0x6469, 0x565f, 0x4453, 0x746f, 0x654e, 0x4c74, 
+0x6f6f, 0x3e6b, 0x5254, 0x4555, 0x2f3c, 0x464d, 0x5043, 0x6f72, 0x6570, 
+0x7472, 0x4779, 0x6972, 0x5f64, 0x5356, 0x6f44, 0x4e74, 0x7465, 0x6f4c, 
+0x6b6f, 0x3c3e, 0x464d, 0x5043, 0x6f72, 0x6570, 0x7472, 0x4779, 0x6972, 
+0x5f64, 0x6544, 0x6373, 0x6972, 0x7470, 0x6f69, 0x526e, 0x776f, 0x3e73, 
+0x3c33, 0x4d2f, 0x4346, 0x7250, 0x706f, 0x7265, 0x7974, 0x7247, 0x6469, 
+0x445f, 0x7365, 0x7263, 0x7069, 0x6974, 0x6e6f, 0x6f52, 0x7377, "\076" 
+    0
+END
+
+IDD_SCRIPT_EDITOR DLGINIT
+BEGIN
+    IDC_MFCLINK_CHAISCRIPT, 0x37c, 179, 0
+0x4d3c, 0x4346, 0x694c, 0x6b6e, 0x555f, 0x6c72, 0x683e, 0x7474, 0x3a70, 
+0x2f2f, 0x6863, 0x6961, 0x6373, 0x6972, 0x7470, 0x632e, 0x6d6f, 0x3c2f, 
+0x4d2f, 0x4346, 0x694c, 0x6b6e, 0x555f, 0x6c72, 0x3c3e, 0x464d, 0x4c43, 
+0x6e69, 0x5f6b, 0x7255, 0x506c, 0x6572, 0x6966, 0x3e78, 0x2f3c, 0x464d, 
+0x4c43, 0x6e69, 0x5f6b, 0x7255, 0x506c, 0x6572, 0x6966, 0x3e78, 0x4d3c, 
+0x4346, 0x694c, 0x6b6e, 0x545f, 0x6f6f, 0x746c, 0x7069, 0x3c3e, 0x4d2f, 
+0x4346, 0x694c, 0x6b6e, 0x545f, 0x6f6f, 0x746c, 0x7069, 0x3c3e, 0x464d, 
+0x4c43, 0x6e69, 0x5f6b, 0x7546, 0x6c6c, 0x6554, 0x7478, 0x6f54, 0x6c6f, 
+0x6974, 0x3e70, 0x4146, 0x534c, 0x3c45, 0x4d2f, 0x4346, 0x694c, 0x6b6e, 
+0x465f, 0x6c75, 0x546c, 0x7865, 0x5474, 0x6f6f, 0x746c, 0x7069, "\076" 
+    IDC_MFCLINK2_EXAMPLES, 0x37c, 207, 0
+0x4d3c, 0x4346, 0x694c, 0x6b6e, 0x555f, 0x6c72, 0x683e, 0x7474, 0x7370, 
+0x2f3a, 0x732f, 0x756f, 0x6372, 0x6665, 0x726f, 0x6567, 0x6e2e, 0x7465, 
+0x702f, 0x642f, 0x7469, 0x6f74, 0x632d, 0x2f70, 0x6977, 0x696b, 0x532f, 
+0x7263, 0x7069, 0x6974, 0x676e, 0x3c2f, 0x4d2f, 0x4346, 0x694c, 0x6b6e, 
+0x555f, 0x6c72, 0x3c3e, 0x464d, 0x4c43, 0x6e69, 0x5f6b, 0x7255, 0x506c, 
+0x6572, 0x6966, 0x3e78, 0x2f3c, 0x464d, 0x4c43, 0x6e69, 0x5f6b, 0x7255, 
+0x506c, 0x6572, 0x6966, 0x3e78, 0x4d3c, 0x4346, 0x694c, 0x6b6e, 0x545f, 
+0x6f6f, 0x746c, 0x7069, 0x3c3e, 0x4d2f, 0x4346, 0x694c, 0x6b6e, 0x545f, 
+0x6f6f, 0x746c, 0x7069, 0x3c3e, 0x464d, 0x4c43, 0x6e69, 0x5f6b, 0x7546, 
+0x6c6c, 0x6554, 0x7478, 0x6f54, 0x6c6f, 0x6974, 0x3e70, 0x4146, 0x534c, 
+0x3c45, 0x4d2f, 0x4346, 0x694c, 0x6b6e, 0x465f, 0x6c75, 0x546c, 0x7865, 
+0x5474, 0x6f6f, 0x746c, 0x7069, "\076" 
+    0
+END
+
+IDD_OPTIONS_GENERAL DLGINIT
+BEGIN
+    IDC_MFCLINK_ENV_VAR, 0x37c, 255, 0
+0x4d3c, 0x4346, 0x694c, 0x6b6e, 0x555f, 0x6c72, 0x683e, 0x7474, 0x7370, 
+0x2f3a, 0x732f, 0x756f, 0x6372, 0x6665, 0x726f, 0x6567, 0x6e2e, 0x7465, 
+0x702f, 0x642f, 0x7469, 0x6f74, 0x632d, 0x2f70, 0x6977, 0x696b, 0x452f, 
+0x766e, 0x7269, 0x6e6f, 0x656d, 0x746e, 0x6156, 0x6972, 0x6261, 0x656c, 
+0x2f73, 0x2f3c, 0x464d, 0x4c43, 0x6e69, 0x5f6b, 0x7255, 0x3e6c, 0x4d3c, 
+0x4346, 0x694c, 0x6b6e, 0x555f, 0x6c72, 0x7250, 0x6665, 0x7869, 0x3c3e, 
+0x4d2f, 0x4346, 0x694c, 0x6b6e, 0x555f, 0x6c72, 0x7250, 0x6665, 0x7869, 
+0x3c3e, 0x464d, 0x4c43, 0x6e69, 0x5f6b, 0x6f54, 0x6c6f, 0x6974, 0x3e70, 
+0x6e45, 0x6976, 0x6f72, 0x6d6e, 0x6e65, 0x2074, 0x6176, 0x6972, 0x6261, 
+0x656c, 0x2073, 0x6e69, 0x6420, 0x7461, 0x6261, 0x7361, 0x2065, 0x6170, 
+0x6874, 0x2f3c, 0x464d, 0x4c43, 0x6e69, 0x5f6b, 0x6f54, 0x6c6f, 0x6974, 
+0x3e70, 0x4d3c, 0x4346, 0x694c, 0x6b6e, 0x465f, 0x6c75, 0x546c, 0x7865, 
+0x5474, 0x6f6f, 0x746c, 0x7069, 0x543e, 0x5552, 0x3c45, 0x4d2f, 0x4346, 
+0x694c, 0x6b6e, 0x465f, 0x6c75, 0x546c, 0x7865, 0x5474, 0x6f6f, 0x746c, 
+0x7069, "\076" 
+    0
+END
+
+IDD_OPTIONS_KEYSTROKES DLGINIT
+BEGIN
+    IDC_STATIC_CUSTOM_KEYS, 0x37c, 157, 0
+0x4d3c, 0x4346, 0x694c, 0x6b6e, 0x555f, 0x6c72, 0x3c3e, 0x4d2f, 0x4346, 
+0x694c, 0x6b6e, 0x555f, 0x6c72, 0x3c3e, 0x464d, 0x4c43, 0x6e69, 0x5f6b, 
+0x7255, 0x506c, 0x6572, 0x6966, 0x3e78, 0x2f3c, 0x464d, 0x4c43, 0x6e69, 
+0x5f6b, 0x7255, 0x506c, 0x6572, 0x6966, 0x3e78, 0x4d3c, 0x4346, 0x694c, 
+0x6b6e, 0x545f, 0x6f6f, 0x746c, 0x7069, 0x3c3e, 0x4d2f, 0x4346, 0x694c, 
+0x6b6e, 0x545f, 0x6f6f, 0x746c, 0x7069, 0x3c3e, 0x464d, 0x4c43, 0x6e69, 
+0x5f6b, 0x7546, 0x6c6c, 0x6554, 0x7478, 0x6f54, 0x6c6f, 0x6974, 0x3e70, 
+0x4146, 0x534c, 0x3c45, 0x4d2f, 0x4346, 0x694c, 0x6b6e, 0x465f, 0x6c75, 
+0x546c, 0x7865, 0x5474, 0x6f6f, 0x746c, 0x7069, "\076" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR_ZOOM_IN      CURSOR                  "res\\cursor_zoom_in.cur"
+
+IDC_CURSOR_ZOOM_OUT     CURSOR                  "res\\cursor2.cur"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "CP_Main\n\nCP_Mai\n\n\nCPMain.Document\nCP_Mai Document"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "CP_Main"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_BUTTON_SAVE          "Save /t Ctrl - S"
+    ID_BUTTON_SAVE_ALL      "Save All /t Ctrl-Shift-S"
+END
+
+STRINGTABLE
+BEGIN
+    ID_BUTTON_CLOSE         "Close /t Escape"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\CP_Main.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+1 TYPELIB "CP_Main.tlb"
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

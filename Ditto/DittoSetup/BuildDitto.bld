@@ -1,0 +1,619 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project version='9' encrypted='1'>
+	<steps type='0'>
+		<step action='Set Macro'>
+			<MacroName>LOGFILE</MacroName>
+			<MacroValue>%temp%\DittoTestBuild_LogFile\Log.txt</MacroValue>
+			<name>Default Log File</name>
+		</step>
+		<step action='Read INI'>
+			<Filename>%projdir%\pw.ini</Filename>
+			<Macro>sf_pw</Macro>
+			<Section>sf</Section>
+			<ValueName>pw</ValueName>
+			<name>Read INI</name>
+		</step>
+		<step action='Group'>
+			<name>Project steps</name>
+		</step>
+		<step action='Set File Attributes'>
+			<Archive type='3'>2</Archive>
+			<Ext>*</Ext>
+			<Hidden type='3'>2</Hidden>
+			<LogAttr type='11'>-1</LogAttr>
+			<LogUnchanged type='11'>-1</LogUnchanged>
+			<Path>%workdir%</Path>
+			<ReadOnly type='3'>2</ReadOnly>
+			<Recurse type='11'>-1</Recurse>
+			<System type='3'>2</System>
+			<buildfailsteps type='11'>0</buildfailsteps>
+			<continueonfail type='3'>1</continueonfail>
+			<indent type='3'>1</indent>
+			<name>Set File Attributes</name>
+		</step>
+		<step action='Delete Files'>
+			<ContinueFail type='11'>-1</ContinueFail>
+			<DelDirs type='11'>-1</DelDirs>
+			<Ext>*</Ext>
+			<LogDel type='11'>-1</LogDel>
+			<Path>%workdir%</Path>
+			<Recurse type='11'>-1</Recurse>
+			<indent type='3'>1</indent>
+			<name>Delete Files</name>
+		</step>
+		<step action='Set File Attributes'>
+			<Archive type='3'>2</Archive>
+			<Ext>*</Ext>
+			<Hidden type='3'>2</Hidden>
+			<LogAttr type='11'>-1</LogAttr>
+			<LogUnchanged type='11'>-1</LogUnchanged>
+			<Path>%testBuildWorkDir%</Path>
+			<ReadOnly type='3'>2</ReadOnly>
+			<Recurse type='11'>-1</Recurse>
+			<System type='3'>2</System>
+			<buildfailsteps type='11'>0</buildfailsteps>
+			<continueonfail type='3'>1</continueonfail>
+			<indent type='3'>1</indent>
+			<name>Set File Attributes</name>
+		</step>
+		<step action='Delete Files'>
+			<ContinueFail type='11'>-1</ContinueFail>
+			<DelDirs type='11'>-1</DelDirs>
+			<Ext>*</Ext>
+			<Path>%testBuildWorkDir%</Path>
+			<Recurse type='11'>-1</Recurse>
+			<indent type='3'>1</indent>
+			<name>Delete Temp Source</name>
+		</step>
+		<step action='Run Program'>
+			<buildfailsteps type='11'>0</buildfailsteps>
+			<command>C:\Program Files\Git\bin\git.exe clone git://git.code.sf.net/p/ditto-cp/ditto %workDir%</command>
+			<indent type='3'>1</indent>
+			<name>Run Program</name>
+			<outputfrom type='3'>1</outputfrom>
+		</step>
+		<step action='Run Script'>
+			<Language>VBScript</Language>
+			<Script><![CDATA[' increment the build number in the global macro BUILD_NUM, creating
+' the macro and initializing to 1 if it doesn't exist
+Const BLD_MACRO = "verBuild"
+
+' retrieve global macros collection
+Set macros = Application.Macros(vbldGlobal) 
+
+' see if our macro exists
+Set macro = macros.Item(BLD_MACRO)
+
+If macro Is Nothing Then
+	' create the macro if not found
+	macros.Add BLD_MACRO, "1"
+	Builder.LogMessage "Created BUILD_NUM macro"
+Else
+	macro.Value = CLng(macro.Value)+1
+	Builder.LogMessage "Incremented BUILD_NUM macro to " & macro.Value
+End If
+]]></Script>
+			<description><![CDATA[Get the next build number
+]]></description>
+			<indent type='3'>1</indent>
+			<name>Increment Build Number</name>
+		</step>
+		<step action='Enhanced Zip Files'>
+			<Action type='3'>2</Action>
+			<ComprMethod type='3'>1</ComprMethod>
+			<Compression>5</Compression>
+			<Dest>%workDir%\dittosetup\output\DittoSource_%versionFileName%.zip</Dest>
+			<ExclExt><![CDATA[*.tlog
+*.pch
+*.obj
+*.asm
+*.lastbuildstate
+*.pdb
+*.exp
+*.svn-base
+*.map
+*.tlh
+.git]]></ExclExt>
+			<Ext>*</Ext>
+			<Hidden type='11'>-1</Hidden>
+			<LogDetail type='11'>-1</LogDetail>
+			<Recurse type='11'>-1</Recurse>
+			<Source>%workDir%</Source>
+			<indent type='3'>1</indent>
+			<name>ZIP Files</name>
+		</step>
+		<step action='Group'>
+			<indent type='3'>1</indent>
+			<name>Build Ditto</name>
+		</step>
+		<step action='Make VS 2017'>
+			<AssemblyVer type='11'>-1</AssemblyVer>
+			<Attr type='11'>-1</Attr>
+			<Config>Release|x64</Config>
+			<FileVer type='11'>-1</FileVer>
+			<Filename>%workDir%\CP_Main_10.sln</Filename>
+			<ProdVer type='11'>-1</ProdVer>
+			<Version>%version%</Version>
+			<VersionSel type='3'>2</VersionSel>
+			<indent type='3'>2</indent>
+			<name>Build Ditto 64</name>
+		</step>
+		<step action='Make VS 2017'>
+			<AssemblyVer type='11'>-1</AssemblyVer>
+			<Attr type='11'>-1</Attr>
+			<Config>Release|Win32</Config>
+			<FileVer type='11'>-1</FileVer>
+			<Filename>%workDir%\CP_Main_10.sln</Filename>
+			<ProdVer type='11'>-1</ProdVer>
+			<Version>%version%</Version>
+			<VersionSel type='3'>2</VersionSel>
+			<indent type='3'>2</indent>
+			<name>Build Ditto 32</name>
+		</step>
+		<step action='Group'>
+			<indent type='3'>1</indent>
+			<name>Zip Source</name>
+		</step>
+		<step action='Enhanced Unzip Files'>
+			<Action type='3'>2</Action>
+			<Dest>%testBuildWorkDir%</Dest>
+			<Ext>*</Ext>
+			<HideOn type='11'>-1</HideOn>
+			<LogDetail type='11'>-1</LogDetail>
+			<PathInfo type='11'>-1</PathInfo>
+			<Recurse type='11'>-1</Recurse>
+			<Source>%workDir%\dittosetup\output\DittoSource_%versionFileName%.zip</Source>
+			<SysOn type='11'>-1</SysOn>
+			<buildfailsteps type='11'>0</buildfailsteps>
+			<indent type='3'>2</indent>
+			<name>Enhanced Unzip Files</name>
+		</step>
+		<step action='Make VS 2017'>
+			<AssemblyVer type='11'>-1</AssemblyVer>
+			<Attr type='11'>-1</Attr>
+			<Config>Release|x64</Config>
+			<FileVer type='11'>-1</FileVer>
+			<Filename>%testBuildWorkDir%\CP_Main_10.sln</Filename>
+			<ProdVer type='11'>-1</ProdVer>
+			<Version>%version%</Version>
+			<VersionSel type='3'>2</VersionSel>
+			<indent type='3'>2</indent>
+			<name>Build Ditto 64</name>
+		</step>
+		<step action='Make VS 2017'>
+			<AssemblyVer type='11'>-1</AssemblyVer>
+			<Attr type='11'>-1</Attr>
+			<Config>Release|x64</Config>
+			<FileVer type='11'>-1</FileVer>
+			<Filename>%testBuildWorkDir%\CP_Main_10.sln</Filename>
+			<ProdVer type='11'>-1</ProdVer>
+			<Version>%version%</Version>
+			<VersionSel type='3'>2</VersionSel>
+			<indent type='3'>2</indent>
+			<name>Build Ditto 32</name>
+		</step>
+		<step action='Run Program'>
+			<command>"C:\Program Files (x86)\Inno Setup 5\ISCC.exe" /F"DittoSetup_%versionFileName%" "%workDir%\DittoSetup\DittoSetup_10.iss"</command>
+			<indent type='3'>1</indent>
+			<name>Build Installer 32</name>
+			<outputfrom type='3'>1</outputfrom>
+		</step>
+		<step action='Run Program'>
+			<command>"C:\Program Files (x86)\Inno Setup 5\ISCC.exe" /F"DittoSetup_64bit_%versionFileName%" "%workDir%\DittoSetup\DittoSetup_10.iss" "/dbit64=1"</command>
+			<indent type='3'>1</indent>
+			<name>Build Installer 64</name>
+			<outputfrom type='3'>1</outputfrom>
+		</step>
+		<step action='Run Program'>
+			<command>"%workDir%\DittoSetup\Build Portable ZIP_10.bat" "DittoPortable_%versionFileName%" bit32</command>
+			<indent type='3'>1</indent>
+			<name>Build Portable 32</name>
+			<outputfrom type='3'>1</outputfrom>
+			<startin>%workDir%\DittoSetup\</startin>
+		</step>
+		<step action='Run Program'>
+			<command>"%workDir%\DittoSetup\Build Portable ZIP_10.bat" "DittoPortable_64bit_%versionFileName%" bit64</command>
+			<indent type='3'>1</indent>
+			<name>Build Portable 64</name>
+			<outputfrom type='3'>1</outputfrom>
+			<startin>%workDir%\DittoSetup\</startin>
+		</step>
+		<step action='Enhanced Zip Files'>
+			<Action type='3'>2</Action>
+			<ComprMethod type='3'>1</ComprMethod>
+			<Compression>6</Compression>
+			<Dest>%workDir%\DittoSetup\output\DittoDebug_%versionFileName%.7z</Dest>
+			<ExclExt><![CDATA[mfc*
+msp*
+msv*
+u3*
+DittoSetup*]]></ExclExt>
+			<Ext><![CDATA[*.pdb
+*.map]]></Ext>
+			<HideOn type='11'>-1</HideOn>
+			<LogDetail type='11'>-1</LogDetail>
+			<Recurse type='11'>-1</Recurse>
+			<Source>%workDir%</Source>
+			<SysOn type='11'>-1</SysOn>
+			<Unicode type='11'>-1</Unicode>
+			<buildfailsteps type='11'>0</buildfailsteps>
+			<indent type='3'>1</indent>
+			<name>Zip Debug Files</name>
+		</step>
+		<step action='Group'>
+			<buildfailsteps type='11'>0</buildfailsteps>
+			<indent type='3'>1</indent>
+			<name>Appx</name>
+		</step>
+		<step action='Enhanced Unzip Files'>
+			<Action type='3'>2</Action>
+			<Dest>%workDir%\DittoSetup\appx\</Dest>
+			<Ext>*</Ext>
+			<HideOn type='11'>-1</HideOn>
+			<LogDetail type='11'>-1</LogDetail>
+			<PathInfo type='11'>-1</PathInfo>
+			<Recurse type='11'>-1</Recurse>
+			<Source>%workDir%\DittoSetup\Output\DittoPortable_%versionFileName%.zip</Source>
+			<SysOn type='11'>-1</SysOn>
+			<buildfailsteps type='11'>0</buildfailsteps>
+			<indent type='3'>2</indent>
+			<name>extraxt x86 Portable</name>
+		</step>
+		<step action='Write File'>
+			<BOM type='11'>-1</BOM>
+			<Filename>%workDir%\DittoSetup\appx\files.ini</Filename>
+			<Text><![CDATA[[[Files]]
+".\appxmanifest.xml"    "AppxManifest.xml"
+
+".\Ditto\Ditto.exe"     "Ditto.exe"
+
+".\Ditto\icudt58.dll" "icudt58.dll"
+".\Ditto\icuin58.dll" "icuin58.dll"
+".\Ditto\icuio58.dll" "icuio58.dll"
+".\Ditto\icutu58.dll" "icutu58.dll"
+".\Ditto\icuuc58.dll" "icuuc58.dll"
+
+".\Ditto\vcruntime140.dll" "vcruntime140.dll"
+".\Ditto\msvcp140.dll" "msvcp140.dll"
+".\Ditto\mfc140u.dll" "mfc140u.dll"
+".\Ditto\mfc140enu.dll" "mfc140enu.dll"
+
+".\WindowsApp" "WindowsApp"
+
+".\Ditto.png"     "Ditto.png"
+".\Ditto_150.png"     "Ditto_150.png"
+".\Ditto_44.png"     "Ditto_44.png"
+
+".\Ditto\Addins\DittoUtil.dll" "Addins\DittoUtil.dll"
+
+".\Ditto\Help\DittoConfig.htm" "Help\DittoConfig.htm"
+".\Ditto\Help\DittoCustomKeys.htm" "Help\DittoCustomKeys.htm"
+".\Ditto\Help\DittoFAQ.htm" "Help\DittoFAQ.htm"
+".\Ditto\Help\DittoGettingStarted.htm" "Help\DittoGettingStarted.htm"
+".\Ditto\Help\Dutch_DittoConfig.htm" "Help\Dutch_DittoConfig.htm"
+".\Ditto\Help\Dutch_DittoFAQ.htm" "Help\Dutch_DittoFAQ.htm"
+".\Ditto\Help\Dutch_DittoGettingStarted.htm" "Help\Dutch_DittoGettingStarted.htm"
+".\Ditto\Help\Persian_DittoCustomKeys.htm" "Help\Persian_DittoCustomKeys.htm"
+".\Ditto\Help\Persian_DittoGettingStarted.htm" "Help\Persian_DittoGettingStarted.htm"
+".\Ditto\Help\RegCustomKeys.jpg" "Help\RegCustomKeys.jpg"
+".\Ditto\Help\U3_Install.htm" "Help\U3_Install.htm"
+
+     
+".\Ditto\Language\Chinese.xml" "Language\Chinese.xml"
+".\Ditto\Language\Chinese Traditional.xml" "Language\Chinese Traditional.xml"
+".\Ditto\Language\Croatian.xml" "Language\Croatian.xml"
+".\Ditto\Language\Czech.xml" "Language\Czech.xml"
+".\Ditto\Language\Danish.xml" "Language\Danish.xml"
+".\Ditto\Language\Deutsch.xml" "Language\Deutsch.xml"
+".\Ditto\Language\Dutch.xml" "Language\Dutch.xml"
+".\Ditto\Language\English.xml" "Language\English.xml"
+".\Ditto\Language\French.xml" "Language\French.xml"
+".\Ditto\Language\Greek.xml" "Language\Greek.xml"
+".\Ditto\Language\Hebrew.xml" "Language\Hebrew.xml"
+".\Ditto\Language\italiano.xml" "Language\italiano.xml"
+".\Ditto\Language\Japanese.xml" "Language\Japanese.xml"
+".\Ditto\Language\Korean.xml" "Language\Korean.xml"
+".\Ditto\Language\Persian.xml" "Language\Persian.xml"
+".\Ditto\Language\Polski.xml" "Language\Polski.xml"
+".\Ditto\Language\Portuguese.xml" "Language\Portuguese.xml"
+".\Ditto\Language\Romanian.xml" "Language\Romanian.xml"
+".\Ditto\Language\Russian.xml" "Language\Russian.xml"
+".\Ditto\Language\Slovenian.xml" "Language\Slovenian.xml"
+".\Ditto\Language\Spanish.xml" "Language\Spanish.xml"
+".\Ditto\Language\Swedish.xml" "Language\Swedish.xml"
+".\Ditto\Language\Turkish.xml" "Language\Turkish.xml"
+".\Ditto\Language\Ukrainian.xml" "Language\Ukrainian.xml"
+".\Ditto\Language\Finnish.xml" "Language\Finnish.xml"
+
+".\Ditto\Themes\Classic.xml" "Themes\Classic.xml"
+".\Ditto\Themes\DarkerDitto.xml" "Themes\DarkerDitto.xml"]]></Text>
+			<buildfailsteps type='11'>0</buildfailsteps>
+			<indent type='3'>2</indent>
+			<name>Write files.ini</name>
+		</step>
+		<step action='Write File'>
+			<Filename>%workDir%\DittoSetup\appx\appxmanifest.xml</Filename>
+			<Text><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Package
+   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+   xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2"
+   xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
+   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+   xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10"
+   xmlns:desktop2="http://schemas.microsoft.com/appx/manifest/desktop/windows10/2"
+   IgnorableNamespaces="desktop2">
+  <Identity Name="60145ScottBrogden.ditto-cp"
+    ProcessorArchitecture="x86"
+    Publisher="CN=2032816C-0EBD-4FA0-8832-B8289B21D4F4"
+    Version="%version%" />
+  <Properties>
+    <DisplayName>Ditto Clipboard</DisplayName>
+    <PublisherDisplayName>Scott Brogden</PublisherDisplayName>
+    <Description>Ditto</Description>
+    <Logo>Ditto.png</Logo>
+  </Properties>
+  <Resources>
+    <Resource Language="en-us" />
+  </Resources>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14316.0" MaxVersionTested="10.0.14316.0" />
+  </Dependencies>
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust"/>
+  </Capabilities>
+  <Applications>
+    <Application Id="Ditto" Executable="Ditto.exe" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements
+       BackgroundColor="#ffffff"
+       DisplayName="Ditto"
+       Square150x150Logo="Ditto_150.png"
+       Square44x44Logo="Ditto_44.png"
+       Description="Ditto" />
+       
+       <Extensions>
+			<desktop:Extension Category="windows.startupTask" Executable="Ditto.exe" EntryPoint="Windows.FullTrustApplication">
+				<desktop:StartupTask TaskId="DittoStartupTask" Enabled="true" DisplayName="Ditto Service" />
+			</desktop:Extension>
+			
+			<desktop2:Extension Category="windows.firewallRules">  
+     			<desktop2:FirewallRules Executable="Ditto.exe">  
+          			<desktop2:Rule Direction="in" IPProtocol="TCP" LocalPortMin="23443" LocalPortMax="23443" RemotePortMin="23443" RemotePortMax="23443" Profile="domainAndPrivate"/>   
+          			<desktop2:Rule Direction="out" IPProtocol="TCP" LocalPortMin="23443" LocalPortMax="23443" RemotePortMin="23443" RemotePortMax="23443" Profile="domainAndPrivate"/>   
+      			</desktop2:FirewallRules>  
+  			</desktop2:Extension>
+			
+
+			<uap:Extension Category="windows.fileTypeAssociation">
+          		<uap3:FileTypeAssociation Name="alsdkja">
+            		<uap:SupportedFileTypes>
+              			<uap:FileType>.dto</uap:FileType>
+            		</uap:SupportedFileTypes>
+          		</uap3:FileTypeAssociation>
+        	</uap:Extension>
+        
+  
+		</Extensions>
+		
+    </Application>
+  </Applications>
+</Package>]]></Text>
+			<buildfailsteps type='11'>0</buildfailsteps>
+			<indent type='3'>2</indent>
+			<name>Write manifest</name>
+		</step>
+		<step action='Run Program'>
+			<buildfailsteps type='11'>0</buildfailsteps>
+			<command>"c:\Program Files (x86)\Windows Kits\10\bin\x86\MakeAppx.exe" pack /f "%workDir%\DittoSetup\appx\files.ini" /p "%workDir%\DittoSetup\appx\Ditto_%versionFileName%.appx"</command>
+			<indent type='3'>2</indent>
+			<name>Gen appx</name>
+			<outputfrom type='3'>1</outputfrom>
+			<startin>%workDir%\DittoSetup\appx</startin>
+		</step>
+		<step action='Run Program'>
+			<ShowCmd type='11'>-1</ShowCmd>
+			<buildfailsteps type='11'>0</buildfailsteps>
+			<command>"c:\Program Files (x86)\Windows Kits\10\bin\x86\signtool.exe" sign -f "%workDir%\DittoSetup\appx\my.pfx" -fd SHA256 -v "%workDir%\DittoSetup\appx\Ditto_%versionFileName%.appx</command>
+			<indent type='3'>2</indent>
+			<name>Sign appx</name>
+			<outputfrom type='3'>1</outputfrom>
+		</step>
+		<step action='Copy Files'>
+			<Converted type='11'>-1</Converted>
+			<Delay>15</Delay>
+			<DestDir>%workDir%\DittoSetup\Output</DestDir>
+			<Ext>Ditto_%versionFileName%.appx</Ext>
+			<Incremental type='11'>-1</Incremental>
+			<LogCopied type='11'>-1</LogCopied>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Retries>10</Retries>
+			<SourceDir>%workDir%\DittoSetup\appx\</SourceDir>
+			<TBD type='11'>-1</TBD>
+			<buildfailsteps type='11'>0</buildfailsteps>
+			<indent type='3'>2</indent>
+			<name>Copy Files</name>
+		</step>
+		<step action='Group'>
+			<indent type='3'>1</indent>
+			<name>Create Web Page</name>
+		</step>
+		<step action='Write File'>
+			<Filename>%workDir%\DittoSetup\output\index.php</Filename>
+			<Text><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ditto clipboard manager - Beta %version%</title>
+<meta name="description" content="" />
+</head>
+
+<?php
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+?>
+
+<body>       
+%DATETIME%
+<br>
+<br>
+<b>Ditto beta, version %version%</b>
+<br><br>
+<a href="DittoSetup_%versionFileName%.exe">Ditto Setup</a><br>
+<a href="DittoSetup_64bit_%versionFileName%.exe">Ditto Setup 64bit</a><br>
+<a href="DittoPortable_%versionFileName%.zip">Ditto Portable</a><br>
+<a href="DittoPortable_64bit_%versionFileName%.zip">Ditto Portable 64</a><br>
+<a href="Ditto_%versionFileName%.appx">Ditto Windows App</a><br>
+
+<br>
+<a href="DittoDebug_%versionFileName%.7z">Ditto Debug Files</a><br>
+<a href="DittoSource_%versionFileName%.zip">Ditto Source</a><br>
+
+<br>
+
+<a href="AllFiles.php">Previous Builds</a><br>
+<br>
+
+<a href="changes.php">Change Log since last release 9-7-2017</a><br>
+
+<br>
+
+<?php Include("changes.php");?>
+
+<br>
+<br>
+
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=4303469; 
+var sc_invisible=0; 
+var sc_partition=54; 
+var sc_click_stat=1; 
+var sc_security="b3f57099"; 
+</script>
+
+<script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script><noscript><div class="statcounter"><a title="site stats" href="http://www.statcounter.com/" target="_blank"><img class="statcounter" src="http://c.statcounter.com/4303469/0/b3f57099/0/" alt="site stats" ></a></div></noscript>
+<!-- End of StatCounter Code --><br><a href="http://my.statcounter.com/project/standard/stats.php?project_id=4303469&guest=1">View My Stats</a>
+
+</body>]]></Text>
+			<indent type='3'>2</indent>
+			<name>Beta web page</name>
+		</step>
+		<step action='Git'>
+			<Command>log</Command>
+			<Options>--pretty=format:"%%ad %%s" --date=short   --since=2017-09-07</Options>
+			<WorkDir>%workDir%</WorkDir>
+			<buildfailsteps type='11'>0</buildfailsteps>
+			<indent type='3'>2</indent>
+			<name>Git</name>
+		</step>
+		<step action='Write File'>
+			<Filename>%workDir%\DittoSetup\output\changes.php</Filename>
+			<Text>%LASTSTEP_OUTPUT%</Text>
+			<buildfailsteps type='11'>0</buildfailsteps>
+			<indent type='3'>2</indent>
+			<name>Log Changes to File</name>
+		</step>
+		<step action='Replace in File'>
+			<FileIn>%workDir%\DittoSetup\output\changes.php</FileIn>
+			<Find>\r\n</Find>
+			<NoModS type='11'>-1</NoModS>
+			<Replace><![CDATA[<br>\r\n]]></Replace>
+			<indent type='3'>2</indent>
+			<name><![CDATA[Replace Line Feeds with <br>]]></name>
+		</step>
+		<step action='FTP'>
+			<Ext>*.*</Ext>
+			<Filename>%workDir%\DittoSetup\output\</Filename>
+			<Incremental type='11'>-1</Incremental>
+			<Logging type='3'>6</Logging>
+			<Password encrypted='1'>amkwNSREZkNXUFp3JmFRMlkc1ehlfY06mdLEVJHqyXdFbT0D5VqgTJGtkZ7P6mdnGca+n6FwXTNm9GfdZyIEMg==</Password>
+			<Percent>10</Percent>
+			<Port>22</Port>
+			<Retries>0</Retries>
+			<Server>web.sourceforge.net</Server>
+			<ServerPath>/home/groups/d/di/ditto-cp/htdocs/beta</ServerPath>
+			<Timeout>30</Timeout>
+			<TransferType type='3'>1</TransferType>
+			<UserName>sabrogden,ditto-cp</UserName>
+			<indent type='3'>1</indent>
+			<name>Copy to beta folder</name>
+		</step></steps>
+	<steps type='1'>
+		<step action='Group'>
+			<checked type='11'>0</checked>
+			<name>Sign App Code</name>
+		</step>
+		<step action='Run Program'>
+			<checked type='11'>0</checked>
+			<command>"c:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\signtool.exe" sign /f "C:\Users\sab.000\Desktop\Ditto_Cert\Ditto.pfx" /p Hastings /t http://timestamp.comodoca.com/authenticode %workDir%\%branch%\Release64\Ditto.exe</command>
+			<indent type='3'>1</indent>
+			<name>Sign Ditto.exe 64</name>
+			<outputfrom type='3'>1</outputfrom>
+		</step>
+		<step action='Run Program'>
+			<checked type='11'>0</checked>
+			<command>"c:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\signtool.exe" sign /f "C:\Users\sab.000\Desktop\Ditto_Cert\Ditto.pfx" /p Hastings /t http://timestamp.comodoca.com/authenticode %workDir%\%branch%\Release64\Addins\DittoUtil.dll</command>
+			<indent type='3'>1</indent>
+			<name>Sign DittoUtil.dll 64</name>
+			<outputfrom type='3'>1</outputfrom>
+		</step>
+		<step action='Run Program'>
+			<checked type='11'>0</checked>
+			<command>"c:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\signtool.exe" sign /f "C:\Users\sab.000\Desktop\Ditto_Cert\Ditto.pfx" /p Hastings /t http://timestamp.comodoca.com/authenticode %workDir%\%branch%\Release\Ditto.exe</command>
+			<indent type='3'>1</indent>
+			<name>Sign Ditto.exe</name>
+			<outputfrom type='3'>1</outputfrom>
+		</step>
+		<step action='Run Program'>
+			<checked type='11'>0</checked>
+			<command>"c:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\signtool.exe" sign /f "C:\Users\sab.000\Desktop\Ditto_Cert\Ditto.pfx" /p Hastings /t http://timestamp.comodoca.com/authenticode %workDir%\%branch%\Release\Addins\DittoUtil.dll</command>
+			<indent type='3'>1</indent>
+			<name>Sign DittoUtil.dll</name>
+			<outputfrom type='3'>1</outputfrom>
+		</step>
+		<step action='Group'>
+			<checked type='11'>0</checked>
+			<indent type='3'>1</indent>
+			<name>Sign Installers</name>
+		</step>
+		<step action='Run Program'>
+			<checked type='11'>0</checked>
+			<command>"c:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\signtool.exe" sign /f "C:\Users\sab.000\Desktop\Ditto_Cert\Ditto.pfx" /p Hastings /t http://timestamp.comodoca.com/authenticode %workDir%\%branch%\DittoSetup\Output\DittoSetup_%versionFileName%.exe</command>
+			<indent type='3'>2</indent>
+			<name>Sign Ditto Installer</name>
+			<outputfrom type='3'>1</outputfrom>
+		</step>
+		<step action='Run Program'>
+			<checked type='11'>0</checked>
+			<command>"c:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\signtool.exe" sign /f "C:\Users\sab.000\Desktop\Ditto_Cert\Ditto.pfx" /p Hastings /t http://timestamp.comodoca.com/authenticode %workDir%\%branch%\DittoSetup\Output\DittoSetup_64bit_%versionFileName%.exe</command>
+			<indent type='3'>2</indent>
+			<name>Sign Ditto 64 Installer</name>
+			<outputfrom type='3'>1</outputfrom>
+		</step></steps>
+	<macros>
+		<macro name='branch'>
+			<value>trunk</value>
+		</macro>
+		<macro name='testBuildWorkDir'>
+			<value>%temp%\DittoTestBuild</value>
+		</macro>
+		<macro name='verMajor'>
+			<value>3</value>
+		</macro>
+		<macro name='verMinor'>
+			<value>21</value>
+		</macro>
+		<macro name='verRevision'>
+			<value>0</value>
+		</macro>
+		<macro name='version'>
+			<value>%verMajor%.%verMinor%.%verBuild%.%verRevision%</value>
+		</macro>
+		<macro name='versionFileName'>
+			<value>%verMajor%_%verMinor%_%verBuild%_%verRevision%</value>
+		</macro>
+		<macro name='workDir'>
+			<value>%temp%\Ditto_Build</value>
+		</macro></macros>
+</project>
